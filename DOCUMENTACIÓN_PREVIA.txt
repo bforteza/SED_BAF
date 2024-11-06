@@ -1,3 +1,5 @@
 guia con la cual vamos a basar nuestro desarrollo: 
 
 https://bitbucket.org/etsidi-sed/tdd_example/wiki/Home
+
+leer la wiki del proyecto
