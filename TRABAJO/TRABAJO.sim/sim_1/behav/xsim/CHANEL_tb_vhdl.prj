@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../TRABAJO.srcs/sim_1/new/CHANEL_tb.vhd" \
-
-# Do not sort compile order
-nosort

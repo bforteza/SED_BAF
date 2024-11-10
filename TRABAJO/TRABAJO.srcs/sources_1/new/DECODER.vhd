@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 09.11.2024 23:27:09
+-- Create Date: 10.11.2024 12:47:50
 -- Design Name: 
--- Module Name: CHANEL - Behavioral
+-- Module Name: DECODER - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.NUMERIC_STD.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -31,21 +31,30 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity CHANEL is
+entity DECODER is
 generic(
-    WIDHT : positive := 4);
-port (
-    A: inout  std_logic_vector (WIDHT-1 downto 0);
-    B: inout std_logic_vector (WIDHT-1 downto 0);
-    ENABLE : in std_logic;
-    D : in std_logic   -- 0 when A => B // 1 when B => A
-    
-  );
-end CHANEL;
+    WIDHT : positive := 3);
+  Port ( 
+    S : in  std_logic_vector (WIDHT-1 downto 0);
+    O: out std_logic_vector (2**WIDHT-1 downto 0);
+    ENABLE : in std_logic
+    );
+end DECODER;
 
-architecture Behavioral of CHANEL is
+architecture Behavioral of DECODER is
+
 begin
-B <= A when D = '0' and ENABLE = '1' else (others => 'Z');
-A <= B when D = '1' and ENABLE = '1' else (others => 'Z');
-
+  process (S, ENABLE)
+  begin
+    -- Inicializar todas las salidas a '0' cuando ENABLE está en '0'
+    if ENABLE = '0' then
+      O <= (others => 'Z');
+    else
+      -- Establecer el bit seleccionado en '1' de acuerdo con el valor de S
+      O <= (others => '0');  -- Primero poner todos los bits a '0'
+      O(to_integer(unsigned(S))) <= '1';
+    end if;
+  end process;
 end Behavioral;
+
+
