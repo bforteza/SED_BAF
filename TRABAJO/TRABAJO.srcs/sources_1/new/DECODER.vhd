@@ -48,7 +48,7 @@ begin
   begin
     -- Inicializar todas las salidas a '0' cuando ENABLE está en '0'
     if ENABLE = '0' then
-      O <= (others => 'Z');
+      O <= (others => '0');
     else
       -- Establecer el bit seleccionado en '1' de acuerdo con el valor de S
       O <= (others => '0');  -- Primero poner todos los bits a '0'

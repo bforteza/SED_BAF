@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../TRABAJO.srcs/sources_1/new/CHANEL.vhd" \
+"../../../../TRABAJO.srcs/sources_1/new/DECODER.vhd" \
+"../../../../TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd" \
+"../../../../TRABAJO.srcs/sources_1/new/f_divider.vhd" \
+"../../../../TRABAJO.srcs/sim_1/new/DIGIT_FLASH_tb.vhd" \
+
+# Do not sort compile order
+nosort
