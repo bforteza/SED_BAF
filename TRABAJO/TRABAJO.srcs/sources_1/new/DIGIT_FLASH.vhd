@@ -27,11 +27,9 @@ end component;
 
 -- Componente CHANEL
 component CHANEL 
-generic(
-    WIDHT : positive := 4);
 port (
-    A      : inout  std_logic_vector (WIDHT-1 downto 0);
-    B      : inout std_logic_vector (WIDHT-1 downto 0);
+    A      : inout  std_logic_vector (3 downto 0);
+    B      : inout std_logic_vector (3 downto 0);
     ENABLE : in std_logic;
     D      : in std_logic   -- 0: A -> B, 1: B -> A
   );
@@ -84,8 +82,7 @@ gen_chanel : for i in 0 to 7 generate
     channel_enable(i) <= NOT (decoder_output(i)); 
 
     chanel_inst : CHANEL
-    generic map (
-         WIDHT => 4)               -- Configura ancho del canal
+   
     port map (
         A      => IO_BCDA(i*4+3 downto i*4),  -- Conecta segmento de 4 bits de IO_BCDA
         B      => IO_BCDB(i*4+3 downto i*4),  -- Conecta segmento de 4 bits de IO_BCDB
