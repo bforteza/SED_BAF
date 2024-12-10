@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd" \
-"../../../../TRABAJO.srcs/sim_1/new/TIME_ADDER_tb.vhd" \
-
-# Do not sort compile order
-nosort

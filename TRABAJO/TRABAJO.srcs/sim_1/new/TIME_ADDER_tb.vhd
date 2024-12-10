@@ -103,7 +103,7 @@ begin
         wait for CLK_PERIOD;
         assert(IO_BCD = x"00005005") report "Fallo 4: no sube a 5 restando" severity error;
         wait;
-        wait;
+       
     end process;
 
 end Behavioral;

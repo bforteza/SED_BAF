@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "LONG_PULSE_DETECTOR_TB_behav" "xil_defaultlib.LONG_PULSE_DETECTOR_TB" -log "elaborate.log" 
