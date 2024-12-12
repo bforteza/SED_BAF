@@ -34,7 +34,7 @@ use ieee.numeric_std.all;
 
 entity TIME_ADDER is
     Port(
-        S : in std_logic_vector(2 downto 0); --Selector
+        SEL : in std_logic_vector(2 downto 0); --Selector
         IO_BCD : inout std_logic_vector(31 downto 0); --Salida BCD
         I_U: in std_logic; --ADD 1
         I_D: in std_logic; --SUBSTACT 1
@@ -79,7 +79,7 @@ if rising_edge(CLK)then
             valor := '0';
         end if;
         if I_D = '1' or I_U = '1' then
-            case S is 
+            case SEL is 
                 when "000" => 
                 UMS := add( UMS, "1001", valor); 
                 when "001" => 

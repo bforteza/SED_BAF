@@ -8,7 +8,7 @@ entity DIGIT_FLASH is
     CLK     : in std_logic;
     ENABLE  : in std_logic;
     RESET   : in std_logic;
-    B       : in std_logic_vector(2 downto 0)
+    SEL       : in std_logic_vector(2 downto 0)
     );
 end DIGIT_FLASH;
 
@@ -71,7 +71,7 @@ decoder_inst: DECODER
     generic map(
         WIDHT => 3)                -- Configura el decodificador para 3 bits de entrada
     Port map( 
-        S      => B,               -- Conecta entrada seleccionada
+        S      => SEL,               -- Conecta entrada seleccionada
         O      => decoder_output,  -- Conecta salida a señal intermedia
         ENABLE => ce_out_signal    -- Habilitación desde la señal intermedia
     );

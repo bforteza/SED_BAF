@@ -1,3 +1,6 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity SYNCHRNZR is
  port (
  CLK : in std_logic;
