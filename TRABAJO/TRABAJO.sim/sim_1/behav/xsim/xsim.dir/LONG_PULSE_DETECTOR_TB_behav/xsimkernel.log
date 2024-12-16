@@ -1,0 +1,7 @@
+Running: xsim.dir/LONG_PULSE_DETECTOR_TB_behav/xsimk.exe -simmode gui -wdb LONG_PULSE_DETECTOR_TB_behav.wdb -simrunnum 0 -socket 53898
+Design successfully loaded
+Design Loading Memory Usage: 8260 KB (Peak: 8260 KB)
+Design Loading CPU Usage: 78 ms
+Simulation completed
+Simulation Memory Usage: 8708 KB (Peak: 8708 KB)
+Simulation CPU Usage: 93 ms

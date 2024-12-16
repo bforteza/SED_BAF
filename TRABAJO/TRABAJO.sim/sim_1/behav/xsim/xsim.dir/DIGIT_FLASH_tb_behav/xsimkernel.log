@@ -1,0 +1,7 @@
+Running: xsim.dir/DIGIT_FLASH_tb_behav/xsimk.exe -simmode gui -wdb DIGIT_FLASH_tb_behav.wdb -simrunnum 0 -socket 56330
+Design successfully loaded
+Design Loading Memory Usage: 8188 KB (Peak: 8188 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8684 KB (Peak: 8684 KB)
+Simulation CPU Usage: 61 ms
