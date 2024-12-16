@@ -18,7 +18,6 @@
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -38,10 +37,12 @@ entity top_timer is
   port (
     CLK      : in  std_logic;                          -- Señal de reloj
     RESET    : in  std_logic;                          -- Reset asíncrono activo alto
-    DATA_UMS : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el primer contador
+   
     DATA_DMS : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el segundo contador
-    CARRY_UMS : out std_logic;                          -- Señal de acarreo (overflow) del primer contador
-    CARRY_DMS : out std_logic;                           -- Señal de acarreo (overflow) del segundo contador
+    DATA_UMS : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el primer contador
+    DATA_US : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el segundo contador
+    CARRY_UMS : inout std_logic;                          -- Señal de acarreo (overflow) del primer contador
+    CARRY_DMS : inout std_logic;                           -- Señal de acarreo (overflow) del segundo contador
      CE_OUT    : out std_logic                             -- Señal de salida activa del divisor de frecuencia
   );
 end top_timer;
@@ -87,10 +88,25 @@ architecture Behavioral of top_timer is
       CARRY_OUT_DMS : out std_logic
     );
   end component;
+  
+  --Instanciación del tercer contador (us_counter)
+  component us_counter is
+    generic (
+      WIDTH: positive := 4
+    );
+    port (
+      CLK      : in  std_logic;
+      RESET    : in  std_logic;
+      CARRY_IN_US : in  std_logic;
+      DATA_US : inout std_logic_vector(WIDTH - 1 downto 0);
+      CARRY_OUT_US : out std_logic
+    );
+  end component;
 
   -- Señales internas para conectar los contadores
   signal internal_data_ums : std_logic_vector(WIDTH - 1 downto 0);
   signal internal_data_dms : std_logic_vector(WIDTH - 1 downto 0);
+  signal internal_data_us : std_logic_vector(WIDTH - 1 downto 0);
   signal ce_out_internal : std_logic;
 
 
@@ -128,9 +144,22 @@ begin
     port map (
       CLK      => CLK,
       RESET    => RESET,
-      CARRY_IN_DMS => CARRY_OUT_UMS,         -- Conectamos el acarreo del primer contador
+      CARRY_IN_DMS => CARRY_UMS,         -- Conectamos el acarreo del primer contador
       DATA_DMS => internal_data_dms,  -- Se conecta el puerto de datos bidireccionales
       CARRY_OUT_DMS => CARRY_DMS
+    );
+    
+     -- Instancia del primer contador (ums_counter)
+  us_counter_inst : us_counter
+    generic map (
+      WIDTH => WIDTH
+    )
+    port map (
+      CLK      => CLK,
+      RESET    => RESET,
+      CARRY_IN_US => CARRY_DMS,         -- Conectamos el acarreo del primer contador
+      DATA_US => internal_data_us,  -- Se conecta el puerto de datos bidireccionales
+      CARRY_OUT_US => CARRY_US
     );
 
 process (RESET, ce_out_internal)

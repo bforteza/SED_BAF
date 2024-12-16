@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:37:11 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Sat Dec 14 20:39:01 2024
+# Process ID: 17644
+# Current directory: C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+# Command line: vivado.exe -log top_timer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_timer.tcl
+# Log file: C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/top_timer.vds
+# Journal file: C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1\vivado.jou
+# Running On        :DESKTOP-L6DDJ0H
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16969 MB
+# Swap memory       :18253 MB
+# Total Virtual     :35223 MB
+# Available Virtual :19275 MB
+#-----------------------------------------------------------
+source top_timer.tcl -notrace
