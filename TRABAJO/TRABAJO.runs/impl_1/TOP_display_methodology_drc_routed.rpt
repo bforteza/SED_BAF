@@ -1,0 +1,55 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Dec 16 13:59:53 2024
+| Host         : LAPTOP-SHFQCREU running 64-bit major release  (build 9200)
+| Command      : report_methodology -file TOP_display_methodology_drc_routed.rpt -pb TOP_display_methodology_drc_routed.pb -rpx TOP_display_methodology_drc_routed.rpx
+| Design       : TOP_display
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+------------------+-----------------------------+------------+
+| Rule      | Severity         | Description                 | Violations |
++-----------+------------------+-----------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 4          |
++-----------+------------------+-----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin clock_divider_inst/counter_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin contador_inst/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin contador_inst/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin contador_inst/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+

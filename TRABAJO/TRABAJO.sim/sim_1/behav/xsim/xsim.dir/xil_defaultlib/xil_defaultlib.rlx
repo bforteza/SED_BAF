@@ -1,0 +1,9 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Counter.vhd,1734348567,vhdl,C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd,,,contador_0_a_7,,,,,,,,
+C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Dec_3_8.vhd,1734018128,vhdl,C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd,,,binary_3bit_decoder,,,,,,,,
+C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Dec_7_seg.vhd,1734348828,vhdl,C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd,,,bcd_to_7seg,,,,,,,,
+C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/MUX.vhd,1734018347,vhdl,C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd,,,mux_32bit_4out,,,,,,,,
+C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd,1734352385,vhdl,,,,top_display,,,,,,,,
