@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "CHANEL_tb_behav" "xil_defaultlib.CHANEL_tb" -log "elaborate.log" 

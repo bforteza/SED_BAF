@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Nov 28 11:44:56 2024
+# Process ID: 17540
+# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2528 C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.xpr
+# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/vivado.log
+# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO\vivado.jou
+# Running On        :DESKTOP-49RGDTP
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16479 MB
+# Swap memory       :4171 MB
+# Total Virtual     :20651 MB
+# Available Virtual :8345 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+source DIGIT_FLASH_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source DIGIT_FLASH_tb.tcl
+close_sim

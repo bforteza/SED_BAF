@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "DIGIT_FLASH_tb_behav" "xil_defaultlib.DIGIT_FLASH_tb" -log "elaborate.log" 
