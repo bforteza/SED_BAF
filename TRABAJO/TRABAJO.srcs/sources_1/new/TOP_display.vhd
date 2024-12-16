@@ -38,7 +38,7 @@ architecture Behavioral of TOP_display is
   signal contador_out : std_logic_vector(2 downto 0); -- Salida del contador (3 bits)
   signal mux_out      : std_logic_vector(3 downto 0); -- Salida del MUX (4 bits)
   signal decoder_out  : std_logic_vector(7 downto 0); -- Salida del decodificador binario (8 bits)
-  signal data_in      : std_logic_vector(31 downto 0) := "00000001001000110100010101100111" ; 
+  signal data_in      : std_logic_vector(31 downto 0) := "00100001010001100000001001000111" ; 
   signal clk_div      : std_logic;
 begin
 

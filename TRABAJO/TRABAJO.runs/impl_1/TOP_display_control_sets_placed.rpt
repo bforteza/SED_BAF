@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Dec 16 13:59:17 2024
+| Date         : Mon Dec 16 16:23:33 2024
 | Host         : LAPTOP-SHFQCREU running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TOP_display_control_sets_placed.rpt
 | Design       : TOP_display
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     2 |
-|    Minimum number of control sets                        |     2 |
+| Total control sets                                       |     3 |
+|    Minimum number of control sets                        |     3 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    12 |
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     2 |
+| Total control sets |     3 |
 | >= 0 to < 4        |     2 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     0 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -60,7 +60,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               4 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              32 |            9 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -70,11 +70,12 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+---------------+------------------+------------------+----------------+--------------+
-|         Clock Signal        | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------+---------------+------------------+------------------+----------------+--------------+
-|  CLK_IBUF_BUFG              |               |                  |                1 |              1 |         1.00 |
-|  clock_divider_inst/counter |               |                  |                2 |              3 |         1.50 |
-+-----------------------------+---------------+------------------+------------------+----------------+--------------+
++-------------------------+---------------+---------------------------+------------------+----------------+--------------+
+|       Clock Signal      | Enable Signal |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+---------------+---------------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG          |               |                           |                1 |              1 |         1.00 |
+|  clock_divider_inst/clk |               |                           |                2 |              3 |         1.50 |
+|  CLK_IBUF_BUFG          |               | clock_divider_inst/p_0_in |                9 |             32 |         3.56 |
++-------------------------+---------------+---------------------------+------------------+----------------+--------------+
 
 

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec 16 13:58:42 2024
-# Process ID: 28608
+# Start of session at: Mon Dec 16 16:22:59 2024
+# Process ID: 6044
 # Current directory: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1
 # Command line: vivado.exe -log TOP_display.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP_display.tcl -notrace
 # Log file: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.vdi
@@ -19,6 +19,6 @@
 # Host memory       :68493 MB
 # Swap memory       :4294 MB
 # Total Virtual     :72788 MB
-# Available Virtual :50598 MB
+# Available Virtual :53402 MB
 #-----------------------------------------------------------
 source TOP_display.tcl -notrace
