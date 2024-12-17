@@ -56,6 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -72,9 +75,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/24_counter.vhd
   C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd
   C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/fdivider.vhd
-  C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/ums_counter.vhd
   C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd
 }
 OPTRACE "Adding files" END { }
@@ -90,6 +93,8 @@ read_xdc C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/constrs_
 set_property used_in_implementation false [get_files C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/constrs_1/imports/Vivado/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/top_timer.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

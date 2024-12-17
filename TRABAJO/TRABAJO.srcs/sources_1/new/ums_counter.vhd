@@ -59,7 +59,7 @@ begin
   end process;
 
   -- Asignación al puerto inout
-  process (q_i)
+  process (q_i,RESET)
   begin
     if RESET = '1' then
       data_internal <= (others => '0'); -- Reinicia la señal `DATA` durante el reset

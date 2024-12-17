@@ -20,7 +20,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -31,25 +32,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top_timer is
-  generic (
-    WIDTH: positive := 4 -- Ancho de los contadores (4 bits)
-  );
   port (
     CLK      : in  std_logic;                          -- Señal de reloj
     RESET    : in  std_logic;                          -- Reset asíncrono activo alto
-   
-    DATA_DMS : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el segundo contador
-    DATA_UMS : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el primer contador
-    DATA_US : inout std_logic_vector(WIDTH - 1 downto 0); -- Puerto de datos bidireccional para el segundo contador
-    CARRY_UMS : inout std_logic;                          -- Señal de acarreo (overflow) del primer contador
-    CARRY_DMS : inout std_logic;                           -- Señal de acarreo (overflow) del segundo contador
-     CE_OUT    : out std_logic                             -- Señal de salida activa del divisor de frecuencia
-  );
+    CE_IN    : in std_logic := '1';
+    LOAD     : in std_logic;                           -- Señal de entradad de datos
+    DATA     : inout std_logic_vector (31 downto 0)    -- Datos bidireccionales
+    );
 end top_timer;
 
 architecture Behavioral of top_timer is
 
--- Instanciación del divisor de frecuencia (fdivider)
+signal data_i : std_logic_vector(31 downto 0);
+signal c_fdivider: std_logic;
+signal c_ums: std_logic;
+signal c_dms: std_logic;
+signal c_us: std_logic;
+signal c_ds: std_logic;
+signal c_umin: std_logic;
+signal c_dmin: std_logic;
+
   component fdivider is
     generic (
       CLK_FREQ : positive := 50000000 -- Frecuencia del reloj (por defecto 50 MHz)
@@ -62,117 +64,151 @@ architecture Behavioral of top_timer is
     );
   end component;
 
-  -- Instanciación del primer contador (ums_counter)
-  component ums_counter is
+ component counter is 
     generic (
-      WIDTH: positive := 4
-    );
-    port (
-      CLK      : in  std_logic;
-      RESET    : in  std_logic;
-      DATA_UMS : inout std_logic_vector(WIDTH - 1 downto 0);
-      CARRY_OUT_UMS : out std_logic
-    );
-  end component;
+    SIZE: positive := 4 -- Ancho de los contadores (máximo 4 bits para un contador decimal)
+  );
+  port (
+    CLK      : in  std_logic;                          -- Señal de reloj
+    RESET  : in  std_logic;                          -- Reset asíncrono activo alto
+    C_IN   : in  std_logic;                           -- Señal de acarreo (overflow) del primer contador
+    DATA   : inout std_logic_vector(3 downto 0); -- Puerto de datos bidireccional para el segundo contador
+    C_OUT : out std_logic; -- Señal de acarreo (overflow) del segundo contador
+    LOAD : in std_logic                           
+  );
+end component;
 
-  -- Instanciación del segundo contador (dms_counter)
-  component dms_counter is
-    generic (
-      WIDTH: positive := 4
-    );
-    port (
-      CLK      : in  std_logic;
-      RESET    : in  std_logic;
-      CARRY_IN_DMS : in  std_logic;
-      DATA_DMS : inout std_logic_vector(WIDTH - 1 downto 0);
-      CARRY_OUT_DMS : out std_logic
-    );
-  end component;
-  
-  --Instanciación del tercer contador (us_counter)
-  component us_counter is
-    generic (
-      WIDTH: positive := 4
-    );
-    port (
-      CLK      : in  std_logic;
-      RESET    : in  std_logic;
-      CARRY_IN_US : in  std_logic;
-      DATA_US : inout std_logic_vector(WIDTH - 1 downto 0);
-      CARRY_OUT_US : out std_logic
-    );
-  end component;
-
-  -- Señales internas para conectar los contadores
-  signal internal_data_ums : std_logic_vector(WIDTH - 1 downto 0);
-  signal internal_data_dms : std_logic_vector(WIDTH - 1 downto 0);
-  signal internal_data_us : std_logic_vector(WIDTH - 1 downto 0);
-  signal ce_out_internal : std_logic;
-
+  component hour_counter is 
+     generic (
+    SIZE: positive := 24 -- Ancho de los contadores (máximo 4 bits para un contador decimal)
+  );
+  port (
+    CLK      : in  std_logic;                          -- Señal de reloj
+    RESET  : in  std_logic;                          -- Reset asíncrono activo alto
+    C_IN   : in  std_logic;                           -- Señal de acarreo (overflow) del primer contador
+    DATA   : inout std_logic_vector(7 downto 0); -- Puerto de datos bidireccional para el segundo contador
+    LOAD : in std_logic  
+    );  
+end component;
 
 begin
 
--- Instancia del divisor de frecuencia (fdivider)
-  fdivider_inst : fdivider
-    generic map (
-      CLK_FREQ => 50000000  -- Ajusta la frecuencia de reloj
-    )
-    port map (
-      RESET  => RESET,
-      CLK    => CLK,
-      CE_IN  => '1',         -- Habilitar el divisor de frecuencia permanentemente
-      CE_OUT => ce_out_internal
-    );
-
-  -- Instancia del primer contador (ums_counter)
-  ums_counter_inst : ums_counter
-    generic map (
-      WIDTH => WIDTH
-    )
-    port map (
-      CLK      => CLK,
-      RESET    => RESET,
-      DATA_UMS => internal_data_ums,  -- Se conecta el puerto de datos bidireccionales
-      CARRY_OUT_UMS => CARRY_UMS
-    );
-
-  -- Instancia del segundo contador (dms_counter)
-  dms_counter_inst : dms_counter
-    generic map (
-      WIDTH => WIDTH
-    )
-    port map (
-      CLK      => CLK,
-      RESET    => RESET,
-      CARRY_IN_DMS => CARRY_UMS,         -- Conectamos el acarreo del primer contador
-      DATA_DMS => internal_data_dms,  -- Se conecta el puerto de datos bidireccionales
-      CARRY_OUT_DMS => CARRY_DMS
-    );
-    
-     -- Instancia del primer contador (ums_counter)
-  us_counter_inst : us_counter
-    generic map (
-      WIDTH => WIDTH
-    )
-    port map (
-      CLK      => CLK,
-      RESET    => RESET,
-      CARRY_IN_US => CARRY_DMS,         -- Conectamos el acarreo del primer contador
-      DATA_US => internal_data_us,  -- Se conecta el puerto de datos bidireccionales
-      CARRY_OUT_US => CARRY_US
-    );
-
-process (RESET, ce_out_internal)
-  begin
-    if RESET = '1' then
-      CE_OUT <= '0';  -- En reset, no se activa el contador
-    else
-      CE_OUT <= ce_out_internal;  -- Cuando el divisor genera el pulso, se pasa al puerto CE_OUT
+    -- Proceso para capturar DATA cuando LOAD está activo
+process (CLK, RESET)
+begin
+  if RESET = '1' then
+    data_i <= (others => '0');  -- Reinicia los valores
+  elsif rising_edge(CLK) then
+    if LOAD = '1' then
+      data_i <= DATA;  -- Captura el valor desde DATA
     end if;
-  end process;
+  end if;
+end process;
 
-  -- Asignación del puerto bidireccional `DATA_UMS`
-  DATA_UMS <= internal_data_ums when RESET = '0' else (others => 'Z');  -- Control de alta impedancia en reset
-  DATA_DMS <= internal_data_dms when RESET = '0' else (others => 'Z');  -- Control de alta impedancia en reset
+-- Puerto bidireccional de DATA
+ 
 
+Inst_fdivider: fdivider 
+  generic map (
+      CLK_FREQ => 50000000  -- Asignación del genérico SIZE a 8
+    )
+port map(
+    CLK => CLK,
+    RESET => RESET,
+    CE_IN => CE_IN,
+    CE_OUT => c_fdivider
+    );
+
+Inst_counterums: counter 
+     generic map (
+      SIZE => 9  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_fdivider,
+      DATA => data_i (3 downto 0),
+      C_OUT => c_ums
+      );
+      
+    Inst_counterdms: counter 
+     generic map (
+      SIZE => 9  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_ums,
+      DATA => data_i (7 downto 4),
+      C_OUT => c_dms
+      );      
+ 
+ Inst_counterus: counter 
+     generic map (
+      SIZE => 9  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_dms,
+      DATA => data_i (11 downto 8),
+      C_OUT => c_us
+      );     
+      
+    Inst_counterds: counter 
+     generic map (
+      SIZE => 6  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_us,
+      DATA => data_i (15 downto 12),
+      C_OUT => c_ds
+      );      
+      
+    Inst_counterumin: counter 
+     generic map (
+      SIZE => 9  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_ds,
+      DATA => data_i (19 downto 16),
+      C_OUT => c_umin
+      );      
+      
+    Inst_counterdmin: counter 
+     generic map (
+      SIZE => 6  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_umin,
+      DATA => data_i (23 downto 20),
+      C_OUT => c_dmin
+      );      
+      
+      Inst_hour_counter: hour_counter
+     generic map (
+      SIZE => 24  -- Asignación del genérico SIZE a 8
+    )
+    port map(
+      CLK => CLK,
+      RESET => RESET,
+      LOAD => LOAD,
+      C_IN => c_dmin,
+      DATA => data_i(31 downto 24)
+      );
+      
+      DATA <= data_i when LOAD = '0' else (others => 'Z');
+       
 end Behavioral;

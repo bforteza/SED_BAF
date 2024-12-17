@@ -1,18 +1,12 @@
 0.7
 2020.2
-May 22 2024
-19:03:11
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/CHANEL_tb.vhd,1731238277,vhdl,,,,chanel_tb,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/DECODER_tb.vhd,1731240668,vhdl,,,,decoder_tb,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/DIGIT_FLASH_tb.vhd,1731624702,vhdl,,,,digit_flash_tb,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/FSM_tb.vhd,1733833397,vhdl,,,,fsm_tb,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/LONG_PULSE_DETECTOR_TB.vhd,1733835032,vhdl,,,,long_pulse_detector_tb,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/TIME_ADDER_tb.vhd,1733773708,vhdl,,,,tb_time_adder,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/f_divider_tb.vhd,1731601113,vhdl,,,,f_divider_tb,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd,1732792404,vhdl,,,,chanel,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DECODER.vhd,1731599823,vhdl,,,,decoder,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd,1732792601,vhdl,,,,digit_flash,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd,1733831012,vhdl,,,,fsm,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/LONG_PULSE_DETECTOR.vhd,1733835165,vhdl,,,,long_pulse_detector,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd,1733773707,vhdl,,,,time_adder,,,,,,,,
-C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/f_divider.vhd,1731625185,vhdl,,,,f_divider,,,,,,,,
+Sep  5 2024
+15:23:16
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_counter.vhd,1734446955,vhdl,,,,tb_counter,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_fdivider.vhd,1734437010,vhdl,,,,tb_fdivider,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_hour_counter.vhd,1734374864,vhdl,,,,tb_hour_counter,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_top_timer.vhd,1734452022,vhdl,,,,tb_top_timer,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/24_counter.vhd,1734377207,vhdl,,,,hour_counter,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd,1734451513,vhdl,,,,counter,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/fdivider.vhd,1734450552,vhdl,C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_fdivider.vhd,,,fdivider,,,,,,,,
+C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd,1734451797,vhdl,C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_top_timer.vhd,,,top_timer,,,,,,,,

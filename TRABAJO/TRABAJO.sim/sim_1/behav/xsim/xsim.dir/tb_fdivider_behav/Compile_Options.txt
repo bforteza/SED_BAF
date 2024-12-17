@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_fdivider_behav" "xil_defaultlib.tb_fdivider" -log "elaborate.log" 
