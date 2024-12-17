@@ -1,8 +1,23 @@
-Vivado Simulator v2024.1.2
+Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_top_timer_behav xil_defaultlib.tb_top_timer -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.fdivider [\fdivider(module=100000)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(size=9)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(size=6)\]
+Compiling architecture behavioral of entity xil_defaultlib.hour_counter [hour_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_timer [top_timer_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_top_timer
+Built simulation snapshot tb_top_timer_behav

@@ -54,7 +54,7 @@ signal c_dmin: std_logic;
 
   component fdivider is
     generic (
-      CLK_FREQ : positive := 50000000 -- Frecuencia del reloj (por defecto 50 MHz)
+      module : positive := 50000000 -- Frecuencia del reloj (por defecto 50 MHz)
     );
     port (
       RESET  : in  std_logic;
@@ -93,24 +93,13 @@ end component;
 
 begin
 
-    -- Proceso para capturar DATA cuando LOAD está activo
-process (CLK, RESET)
-begin
-  if RESET = '1' then
-    data_i <= (others => '0');  -- Reinicia los valores
-  elsif rising_edge(CLK) then
-    if LOAD = '1' then
-      data_i <= DATA;  -- Captura el valor desde DATA
-    end if;
-  end if;
-end process;
-
--- Puerto bidireccional de DATA
  
+
+
 
 Inst_fdivider: fdivider 
   generic map (
-      CLK_FREQ => 50000000  -- Asignación del genérico SIZE a 8
+      module => 1000000  -- Asignación del genérico SIZE a 8
     )
 port map(
     CLK => CLK,
@@ -128,7 +117,7 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_fdivider,
-      DATA => data_i (3 downto 0),
+      DATA => DATA(3 downto 0),
       C_OUT => c_ums
       );
       
@@ -141,7 +130,7 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_ums,
-      DATA => data_i (7 downto 4),
+      DATA => DATA(7 downto 4),
       C_OUT => c_dms
       );      
  
@@ -154,7 +143,7 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_dms,
-      DATA => data_i (11 downto 8),
+      DATA => DATA(11 downto 8),
       C_OUT => c_us
       );     
       
@@ -167,7 +156,7 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_us,
-      DATA => data_i (15 downto 12),
+      DATA => DATA(15 downto 12),
       C_OUT => c_ds
       );      
       
@@ -180,7 +169,7 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_ds,
-      DATA => data_i (19 downto 16),
+      DATA => DATA(19 downto 16),
       C_OUT => c_umin
       );      
       
@@ -193,7 +182,7 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_umin,
-      DATA => data_i (23 downto 20),
+      DATA => DATA(23 downto 20),
       C_OUT => c_dmin
       );      
       
@@ -206,9 +195,8 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_dmin,
-      DATA => data_i(31 downto 24)
+      DATA => DATA(31 downto 24)
       );
       
-      DATA <= data_i when LOAD = '0' else (others => 'Z');
-       
+      
 end Behavioral;

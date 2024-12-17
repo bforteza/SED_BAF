@@ -18,7 +18,7 @@ entity counter is
 end counter;
 
 architecture Behavioral of counter is
-
+signal f_s : std_logic := '0';
 begin
      -- Proceso principal del segundo contador
   process (CLK, RESET)
@@ -35,19 +35,28 @@ variable aux: unsigned(3 downto 0) := (others => '0');
         aux := unsigned(DATA);
       elsif LOAD = '0' then
         if C_IN = '1' then 
+            if aux = SIZE - 1 then
+                f_s <= '1';
+            else 
+                f_s <= '0';
+            end if;
+            
             if aux = SIZE then
                 aux := "0000";
-                C_OUT <= '1';
+                
             else
+                
                 aux := aux + 1;
-                C_OUT <= '0';
+                
             end if; 
             
         end if;
         
+      
         
         DATA <= std_logic_vector(aux); 
       end if;
     end if;
   end process;
+  C_OUT <= '0' when f_s = '0' else C_IN when f_s = '1' ;
 end Behavioral;

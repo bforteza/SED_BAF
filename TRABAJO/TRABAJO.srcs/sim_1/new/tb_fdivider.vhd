@@ -1,85 +1,77 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 17.12.2024 12:48:41
--- Design Name: 
--- Module Name: tb_fdivider - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+entity fdivider_tb is
+end fdivider_tb;
 
-entity tb_fdivider is
-end tb_fdivider;
+architecture behavior of fdivider_tb is 
 
-architecture Behavioral of tb_fdivider is
-    -- Signals for the fdivider component
-    signal CLK       : std_logic := '0';
-    signal RESET     : std_logic := '0';
-    signal CE_IN     : std_logic := '1';
-    signal CE_OUT    : std_logic;
+  -- Component Declaration for the Unit Under Test (UUT)
+  component fdivider
+    generic (
+      MODULE: positive
+    );
+    port(
+      RESET : in  std_logic;
+      CLK   : in  std_logic;
+      CE_IN : in  std_logic;
+      CE_OUT: out std_logic
+    );
+  end component;
 
-    -- Constant for clock period (100 MHz)
-    constant CLK_PERIOD : time := 10 ps;  -- Corresponds to a 100 MHz clock
+  --Inputs
+  signal reset : std_logic;
+  signal clk   : std_logic;
+  signal ce_in : std_logic := '1';
+
+  --Outputs
+  signal ce_out: std_logic;
+
+  -- Clock period definitions
+  constant clk_period: time     := 10 ns;
+
+  constant module    : positive := 8;
+
 begin
-    -- Instantiate the fdivider component
-    uut: entity work.fdivider
-        generic map (
-            CLK_FREQ => 100000000  -- 100 MHz clock frequency
-        )
-        port map (
-            RESET  => RESET,
-            CLK    => CLK,
-            CE_IN  => CE_IN,
-            CE_OUT => CE_OUT
-        );
+  -- Instantiate the Unit Under Test (UUT)
+  uut: fdivider
+    generic map (
+      MODULE => module
+    )
+    port map (
+      RESET  => reset,
+      CLK    => clk,
+      CE_IN  => ce_in,
+      CE_OUT => ce_out
+    );
 
-    -- Generate the clock signal
-    CLK_process : process
-    begin
-        CLK <= '0';
-        wait for CLK_PERIOD / 2;
-        CLK <= '1';
-        wait for CLK_PERIOD / 2;
-    end process;
+  -- Clock process definitions
+  clk_process :process
+  begin
+    clk <= '0';
+    wait for 0.5 * clk_period;
+    clk <= '1';
+    wait for 0.5 * clk_period;
+  end process;
 
-    -- Stimulus process
-    stimulus_process : process
-    begin
-        -- Apply RESET
-        RESET <= '1';
-        wait for 20 * CLK_PERIOD;
-        RESET <= '0';
-        
-        -- Test 1: Check the operation with CE_IN = '1'
-        -- Wait for a few cycles and observe CE_OUT
-        wait for 10 * CLK_PERIOD;
-        -- Test for a few more cycles, CE_OUT should be toggling every millisecond
-        wait for 100 * CLK_PERIOD;
-        
-        -- Test 2: Set CE_IN to '0' and verify that CE_OUT doesn't toggle
-        CE_IN <= '0';
-        wait for 200 * CLK_PERIOD;
+  reset <= '1' after 0.25 * clk_period, '0' after 0.75 * clk_period;
+  
+  -- Stimulus process
+  stim_proc: process
+    variable tref: time;
+  begin
+    wait until CE_OUT = '0';
+    wait until CE_OUT = '0';
+    tref := now;
+    wait until CE_OUT = '0';
+    assert now - tref = module * clk_period
+      report "[ERROR]: Wrong timing."
+      severity failure;
+    
+    wait for 0.25 * clk_period;
 
-        -- Test 3: Re-enable CE_IN and check the behavior again
-        CE_IN <= '1';
-        wait for 200 * CLK_PERIOD;
-
-        -- Finish the simulation
-        wait;
-    end process;
-end Behavioral;
+    assert false
+      report "[SUCCESS]: Simulation finished."
+      severity failure;
+  end process;
+end;

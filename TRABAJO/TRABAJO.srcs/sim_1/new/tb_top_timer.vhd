@@ -75,7 +75,7 @@ begin
   process
   begin
     -- Inicialización
-    report "Starting simulation...";
+    CE_IN_tb <= '1';
     RESET_tb <= '1';  -- Reset activo
     LOAD_tb  <= '0';
     DATA_tb  <= (others => 'Z');  -- Alta impedancia en DATA
@@ -85,7 +85,7 @@ begin
     wait for 20 ns;
 
     -- Simulación de carga de datos (LOAD = '1')
-    report "Loading data into the counter...";
+  
     LOAD_tb <= '1';
     DATA_tb <= x"12345678";  -- Cargar un valor en DATA
     wait for 2*CLK_PERIOD;
@@ -97,8 +97,8 @@ begin
    
 
     -- Finalización
-    report "End of simulation.";
-    wait;
+  
+    wait for 9999*CLK_PERIOD;
   end process;
 
 end Behavioral;

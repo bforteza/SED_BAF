@@ -101,7 +101,7 @@ begin
     -- Test Case 3: Increment the counter with C_IN = 1
     C_IN <= '1';
     wait for 5 * CLK_PERIOD;
-
+ C_IN <= '0';
     -- Test Case 4: Overflow the counter
     wait for 10 * CLK_PERIOD;
 
