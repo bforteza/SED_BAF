@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Dec 17 13:59:42 2024
-# Process ID: 11588
+# Start of session at: Tue Dec 17 17:30:08 2024
+# Process ID: 14820
 # Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
 # Command line: vivado.exe -log SUPER_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SUPER_TOP.tcl
 # Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.vds
@@ -19,6 +19,6 @@
 # Host memory       :16479 MB
 # Swap memory       :6174 MB
 # Total Virtual     :22653 MB
-# Available Virtual :10629 MB
+# Available Virtual :10963 MB
 #-----------------------------------------------------------
 source SUPER_TOP.tcl -notrace

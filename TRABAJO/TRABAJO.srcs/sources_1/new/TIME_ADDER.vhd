@@ -93,9 +93,17 @@ if rising_edge(CLK)then
                 when "101" =>
                 DM := add( DM, "0101", valor); 
                 when "110" =>
-                UH := add( UH, "1001", valor); 
+                if DH < "0010" then
+                    UH := add( UH, "1001", valor);
+                else 
+                     UH := add( UH, "0011", valor);
+                end if;    
                 when "111" =>
-                DH := add( DH, "0101", valor); 
+                if UH < "0100" then
+                    DH := add( DH, "0010", valor); 
+                else 
+                    DH := add( DH, "0001", valor);
+                end if;
                 when others => 
             end case;   
         end if;  

@@ -1,7 +1,7 @@
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot f_divider_tb_behav xil_defaultlib.f_divider_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_TOP_behav xil_defaultlib.tb_TOP -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,6 +11,15 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.f_divider [\f_divider(module=8)\]
-Compiling architecture behavior of entity xil_defaultlib.f_divider_tb
-Built simulation snapshot f_divider_tb_behav
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSM [fsm_default]
+Compiling architecture behavioral of entity xil_defaultlib.CHANEL [chanel_default]
+Compiling architecture behavioral of entity xil_defaultlib.f_divider [\f_divider(module=40000000)\]
+Compiling architecture behavioral of entity xil_defaultlib.DECODER [decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.DIGIT_FLASH [digit_flash_default]
+Compiling architecture behavioral of entity xil_defaultlib.TIME_ADDER [time_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
+Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
+Compiling architecture behavioral of entity xil_defaultlib.TOP [top_default]
+Compiling architecture tb of entity xil_defaultlib.tb_top
+Built simulation snapshot tb_TOP_behav

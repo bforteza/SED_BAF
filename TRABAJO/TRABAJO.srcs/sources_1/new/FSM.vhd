@@ -88,6 +88,7 @@ begin
     case current_state is
       when REST =>
        ENABLE  <= '0';
+       
       when ACTIVE =>
        ENABLE <= '1'; 
        
