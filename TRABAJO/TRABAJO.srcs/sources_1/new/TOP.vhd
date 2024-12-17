@@ -60,16 +60,6 @@ component SYNCHRNZR is
  );
  end component;
  
- component LONG_PULSE_DETECTOR is
-  generic (
-    REG_LENGTH : integer := 41 -- Longitud del registro
-  );
-  port (
-    CLK : in std_logic;
-    SYNC_IN : in std_logic;
-    EDGE : out std_logic
-  );
-end component;
 
 component EDGEDTCTR is
  port (
@@ -80,7 +70,7 @@ component EDGEDTCTR is
  
 end component;
 
-signal IO_BCD_OUT : std_logic_vector(31 downto 0);
+
 signal IO_BCD_INT : std_logic_vector(31 downto 0);
 signal ENABLE : std_logic;
 signal SEL : std_logic_vector(2 downto 0);
@@ -114,7 +104,7 @@ u_FSM : FSM
 -- DIGIT_FLASH Instance
   u_DIGIT_FLASH: DIGIT_FLASH
     port map (
-      IO_BCDA => IO_BCD_OUT,
+      IO_BCDA => IO_BCD,
       IO_BCDB => IO_BCD_INT,
       CLK => CLK,
       ENABLE => ENABLE,
@@ -127,8 +117,8 @@ u_FSM : FSM
     port map (
       SEL => SEL,
       IO_BCD => IO_BCD,
-      I_U => I_U_SIN,
-      I_D => I_D_SIN,
+      I_U => I_U_EDG,
+      I_D => I_D_EDG,
       ENABLE => ENABLE,
       CLK => CLK
     );
@@ -170,13 +160,10 @@ u_FSM : FSM
     );
 
   -- LONG_PULSE_DETECTOR Instance
-  u_LONG_PULSE_DETECTOR: LONG_PULSE_DETECTOR
-    generic map (
-      REG_LENGTH => 41
-    )
+  u_EDGEDTCTR_START: EDGEDTCTR
     port map (
       CLK => CLK,
-      SYNC_IN => START_STOP_SIN ,
+      SYNC_IN => START_STOP_SIN,
       EDGE => START_STOP_EDG
     );
 

@@ -3,26 +3,26 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec 16 15:49:43 2024
-# Process ID: 21672
-# Current directory: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24672 C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.xpr
-# Log file: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/vivado.log
-# Journal file: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO\vivado.jou
-# Running On        :LAPTOP-SHFQCREU
+# Start of session at: Tue Dec 17 12:53:34 2024
+# Process ID: 7640
+# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5772 C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.xpr
+# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/vivado.log
+# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO\vivado.jou
+# Running On        :DESKTOP-49RGDTP
 # Platform          :Windows Server 2016 or Windows 10
-# Operating System  :22631
-# Processor Detail  :Intel(R) Core(TM) i7-10870H CPU @ 2.20GHz
-# CPU Frequency     :2208 MHz
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
 # CPU Physical cores:8
 # CPU Logical cores :16
-# Host memory       :68493 MB
-# Swap memory       :4294 MB
-# Total Virtual     :72788 MB
-# Available Virtual :56159 MB
+# Host memory       :16479 MB
+# Swap memory       :6174 MB
+# Total Virtual     :22653 MB
+# Available Virtual :14116 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.xpr
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.xpr
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
@@ -124,52 +124,141 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 availa
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
 INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.gen/sources_1'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1621.488 ; gain = 503.695
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 1608.438 ; gain = 520.242
 update_compile_order -fileset sources_1
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP_display.dcp with file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/TOP_display.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Dec 16 16:01:15 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
-[Mon Dec 16 16:01:15 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
 open_run impl_1
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2033.840 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2030.129 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2120.363 ; gain = 0.000
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2115.578 ; gain = 0.137
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
 INFO: [Project 1-853] Binary constraint restore complete.
 INFO: [Designutils 20-5722] Start Reading Physical Databases.
 Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2690.539 ; gain = 0.000
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2709.680 ; gain = 0.000
 Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2690.539 ; gain = 0.000
-Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2690.539 ; gain = 0.000
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2690.539 ; gain = 0.000
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2709.680 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2709.680 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2709.680 ; gain = 0.000
 Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2690.539 ; gain = 0.000
-Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2690.539 ; gain = 0.000
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2709.680 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2709.680 ; gain = 0.000
 Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2690.539 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2690.539 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 2709.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2709.680 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2833.340 ; gain = 1189.109
+open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2870.184 ; gain = 1226.566
 WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_TOP'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_TOP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_TOP_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_TOP_behav xil_defaultlib.tb_TOP -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_TOP_behav xil_defaultlib.tb_TOP -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_TOP_behav -key {Behavioral:sim_1:Functional:tb_TOP} -tclbatch {tb_TOP.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_TOP.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10s
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2921.508 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2921.508 ; gain = 17.789
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2921.508 ; gain = 17.789
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:03:52 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [Common 17-9] Error reading message records.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:05:35 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:05:47 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:05:48 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:05:48 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\FSM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\FSM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:08:17 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:08:17 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\FSM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -194,63 +283,185 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2844.195 ; gain = 0.895
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2921.508 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B470A
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+set_property top f_divider_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
 ERROR: [Common 17-180] Spawn failed: No error
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP_display.dcp with file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/TOP_display.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Dec 16 16:07:35 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
-[Mon Dec 16 16:07:35 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
 ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'f_divider_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'f_divider_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 refresh_design
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2938.699 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2967.133 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2938.699 ; gain = 0.000
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2967.133 ; gain = 0.000
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
 INFO: [Project 1-853] Binary constraint restore complete.
 INFO: [Designutils 20-5722] Start Reading Physical Databases.
 Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2938.699 ; gain = 0.000
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2967.133 ; gain = 0.000
 Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2938.699 ; gain = 0.000
-Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2938.699 ; gain = 0.000
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2938.699 ; gain = 0.000
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2967.133 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2967.133 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2967.133 ; gain = 0.000
 Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2938.699 ; gain = 0.000
-Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2938.699 ; gain = 0.000
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2967.133 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2967.133 ; gain = 0.000
 Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2938.699 ; gain = 0.000
-refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2938.699 ; gain = 19.844
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2967.133 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2967.133 ; gain = 7.816
 WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'f_divider_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'f_divider_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj f_divider_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/f_divider_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'f_divider_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot f_divider_tb_behav xil_defaultlib.f_divider_tb -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot f_divider_tb_behav xil_defaultlib.f_divider_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.f_divider [\f_divider(module=8)\]
+Compiling architecture behavior of entity xil_defaultlib.f_divider_tb
+Built simulation snapshot f_divider_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "f_divider_tb_behav -key {Behavioral:sim_1:Functional:f_divider_tb} -tclbatch {f_divider_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source f_divider_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10s
+Failure: [ERROR]: Wrong timing.
+Time: 325 ns  Iteration: 3  Process: /f_divider_tb/stim_proc  File: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/f_divider_tb.vhd
+$finish called at time : 325 ns : File "C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/f_divider_tb.vhd" Line 69
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'f_divider_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10s
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.488 ; gain = 39.980
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:21:56 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:21:56 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -275,98 +486,378 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2949.320 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3801.043 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B470A
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-ERROR: [Common 17-180] Spawn failed: No error
-[Mon Dec 16 16:10:58 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
-ERROR: [Common 17-39] 'launch_runs' failed due to earlier errors.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
 reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP_display.dcp with file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/TOP_display.dcp
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Dec 16 16:12:20 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
-[Mon Dec 16 16:12:20 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
+[Tue Dec 17 13:25:25 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:25:25 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:30:35 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:30:35 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+close_hw_manager
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:41:56 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:41:56 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sim_1\new\f_divider_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\DIGIT_FLASH.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\CHANEL.vhd:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.1.0
+  **** Build date : Mar  6 2024 at 20:50:54
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Mar 09 2024-01:00:37
+    **** Build number : 2024.1.1709942437
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3801.043 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
 reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP_display.dcp with file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/TOP_display.dcp
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Dec 16 16:16:50 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
-[Mon Dec 16 16:16:50 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+[Tue Dec 17 13:51:08 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:51:08 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -391,43 +882,204 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2971.734 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3801.043 ; gain = 0.000
 open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B470A
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
 close_hw_manager
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
 reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP_display.dcp with file C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/TOP_display.dcp
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Mon Dec 16 16:22:00 2024] Launched synth_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
-[Mon Dec 16 16:22:00 2024] Launched impl_1...
-Run output will be captured here: C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ferni\OneDrive\Documentos\GitHub\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+[Tue Dec 17 13:58:24 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:58:24 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run impl_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Dec 17 13:59:39 2024] Launched synth_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/runme.log
+[Tue Dec 17 13:59:39 2024] Launched impl_1...
+Run output will be captured here: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\clock_divider.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_7_seg.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Dec_3_8.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\MUX.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\Counter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.srcs\sources_1\new\TOP_display.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -452,16 +1104,16 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2971.734 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3801.043 ; gain = 0.000
 open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B470A
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE3A67A
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

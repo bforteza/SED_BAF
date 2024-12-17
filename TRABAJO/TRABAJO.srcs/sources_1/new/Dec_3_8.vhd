@@ -37,8 +37,8 @@ begin
 
     case binary_in is
       when "000" => output <= "01111111"; -- Activar salida 0
-      when "001" => output <= "10111101"; -- Activar salida 1
-      when "010" => output <= "11011011"; -- Activar salida 2
+      when "001" => output <= "10111111"; -- Activar salida 1
+      when "010" => output <= "11011111"; -- Activar salida 2
       when "011" => output <= "11101111"; -- Activar salida 3
       when "100" => output <= "11110111"; -- Activar salida 4
       when "101" => output <= "11111011"; -- Activar salida 5

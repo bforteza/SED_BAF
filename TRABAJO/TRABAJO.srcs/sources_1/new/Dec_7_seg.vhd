@@ -45,7 +45,7 @@ begin
       when "0111" => seg <= "1111000"; -- 7
       when "1000" => seg <= "0000000"; -- 8
       when "1001" => seg <= "0010000"; -- 9
-      when "1010" => seg <= "1111111"; --NO DISPLAY
+      when "1111" => seg <= "1111111"; --NO DISPLAY
       when others => seg <= "0000110"; -- E            
     end case;
   end process;

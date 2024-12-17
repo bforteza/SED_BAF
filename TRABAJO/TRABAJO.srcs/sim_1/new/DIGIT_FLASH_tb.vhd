@@ -15,7 +15,7 @@ architecture Behavioral of DIGIT_FLASH_tb is
             CLK     : in std_logic;
             ENABLE  : in std_logic;
             RESET : in std_logic;
-            B       : in std_logic_vector(2 downto 0)
+            SEL       : in std_logic_vector(2 downto 0)
         );
     end component;
 
@@ -25,7 +25,7 @@ architecture Behavioral of DIGIT_FLASH_tb is
     signal CLK     : std_logic := '0';
     signal ENABLE  : std_logic := '0';
      signal RESET  : std_logic := '0';
-    signal B       : std_logic_vector(2 downto 0) := "000";
+    signal SEL      : std_logic_vector(2 downto 0) := "000";
 
     -- Reloj de prueba
     constant CLK_PERIOD : time := 10 ns;
@@ -40,7 +40,7 @@ begin
             Clk     => CLK,
             ENABLE  => ENABLE,
             RESET => RESET,
-            B       => B
+            SEL       => SEL
         );
 
     -- Generador de reloj
@@ -62,7 +62,7 @@ begin
 
         
         ENABLE <= '0';  
-        B <= "000";     
+        SEL <= "000";     
         IO_BCDB <= (others => 'Z'); 
         IO_BCDA <= X"00000000"; 
         wait for 150 ns;
@@ -70,28 +70,28 @@ begin
           ENABLE <= '0';
             
         ENABLE <= '1';     
-        B <= "000";     
+        SEL <= "000";     
         IO_BCDA <= (others => 'Z'); 
         IO_BCDB <= X"FFFFFFFF"; 
         wait for 100 ns;
         assert (IO_BCDB = (IO_BCDB'range => '1')) report "Fallo 1: B no sigue A" severity error;
         --PRUEBA VISUAL
-        B <= "001"; 
+        SEL <= "001"; 
         wait for 100 ns; 
-        B <= "010"; 
+        SEL <= "010"; 
         wait for 100 ns; 
-        B <= "011"; 
+        SEL <= "011"; 
         ENABLE <= '0';
         wait for 100 ns; 
-        B <= "100"; 
+        SEL <= "100"; 
         wait for 100 ns;
-         B <= "101"; 
+         SEL <= "101"; 
         wait for 100 ns; 
-        B <= "110"; 
+        SEL <= "110"; 
         wait for 100 ns; 
-        B <= "111"; 
+        SEL <= "111"; 
         wait for 100 ns; 
-        B <= "000"; 
+        SEL <= "000"; 
         wait for 100 ns;
         ENABLE <= '0';
     end process;

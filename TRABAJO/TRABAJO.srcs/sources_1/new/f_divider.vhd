@@ -8,6 +8,7 @@ use IEEE.std_logic_1164.all;
 entity f_divider is
   generic (
     MODULE: positive := 16
+    
   );
   port (
     RESET : in  std_logic;

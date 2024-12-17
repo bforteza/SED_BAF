@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../TRABAJO.srcs/sources_1/new/LONG_PULSE_DETECTOR.vhd" \
-"../../../../TRABAJO.srcs/sim_1/new/LONG_PULSE_DETECTOR_TB.vhd" \
-
-# Do not sort compile order
-nosort

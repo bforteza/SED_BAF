@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734362520" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/TOP_display.dcp">
-  <File Type="PA-TCL" Name="TOP_display.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="TOP_display_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="TOP_display_reports.tcl"/>
-  <File Type="RDS-RDS" Name="TOP_display.vds"/>
-  <File Type="RDS-UTIL" Name="TOP_display_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="TOP_display_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="TOP_display.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="TOP_display_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="TOP_display_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734440379" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/TOP.dcp">
+  <File Type="PA-TCL" Name="SUPER_TOP.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="SUPER_TOP_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="SUPER_TOP_reports.tcl"/>
+  <File Type="RDS-RDS" Name="SUPER_TOP.vds"/>
+  <File Type="RDS-UTIL" Name="SUPER_TOP_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="SUPER_TOP_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="SUPER_TOP.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SUPER_TOP_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="SUPER_TOP_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CHANEL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DECODER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DIGIT_FLASH.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -29,7 +47,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/MUX.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SINCRO.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TOP.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,9 +83,40 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/TIME_ADDER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/asdf.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/f_divider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SUPER_TOP.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/LONG_PULSE_DETECTOR.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="TOP_display"/>
+      <Option Name="TopModule" Val="SUPER_TOP"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -63,13 +130,12 @@
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Vivado/Nexys-4-DDR-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PSRCDIR/utils_1/imports/synth_1/TOP_display.dcp">
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/TOP.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

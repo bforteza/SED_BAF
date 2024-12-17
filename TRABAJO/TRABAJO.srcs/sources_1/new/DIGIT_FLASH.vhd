@@ -38,7 +38,7 @@ end component;
 -- Componente f_divider
 component f_divider 
   generic (
-    MODULE: positive := 16
+    MODULE: positive := 10000
   );
   port (
     RESET  : in  std_logic;
@@ -52,19 +52,20 @@ end component;
 signal ce_out_signal     : std_logic;                         -- Señal intermedia para CE_OUT
 signal decoder_output    : std_logic_vector(7 downto 0);      -- Señal intermedia para O del DECODER
 signal channel_enable    : std_logic_vector(7 downto 0);      -- Señal intermedia para habilitar canales
-
+signal inter : std_logic;
 begin
 
 -- Instancia del divisor de frecuencia
 f_divider_inst: f_divider
     generic map ( 
-      MODULE => 10)
+      MODULE => 40000000)
     Port map( 
        RESET  => NOT ENABLE,           -- Conecta RESET
        CLK    => CLK,             -- Conecta CLK
        CE_IN  => ENABLE,          -- Habilitación del divisor
        CE_OUT => ce_out_signal    -- Conecta salida a señal intermedia
     );
+    
         
 -- Instancia del decodificador
 decoder_inst: DECODER 

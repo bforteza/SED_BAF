@@ -38,5 +38,5 @@ end CHANEL;
 architecture Behavioral of CHANEL is
 begin
 B <= A when D = '0' and ENABLE = '1' else (others => 'Z');
-A <= B when D = '1' and ENABLE = '1' else "1010" when ENABLE = '0' else (others => 'Z'); 
+A <= B when D = '1' and ENABLE = '1' else "1111" when ENABLE = '0' else (others => 'Z'); 
 end Behavioral;

@@ -1,0 +1,124 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Dec 17 10:56:30 2024
+# Process ID: 12924
+# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18516 C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.xpr
+# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/vivado.log
+# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO\vivado.jou
+# Running On        :DESKTOP-49RGDTP
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16479 MB
+# Swap memory       :6174 MB
+# Total Virtual     :22653 MB
+# Available Virtual :14941 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.xpr
+update_compile_order -fileset sources_1
+set_property -name {xsim.simulate.runtime} -value {10s} -objects [get_filesets sim_1]
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_TOP [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_TOP.tcl
+close_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_TOP.tcl
+close_sim
+launch_simulation
+source tb_TOP.tcl
+close_sim
+launch_simulation
+source tb_TOP.tcl
+close_sim
+launch_simulation
+source tb_TOP.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top DIGIT_FLASH_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source DIGIT_FLASH_tb.tcl
+close_sim
+launch_simulation
+source DIGIT_FLASH_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_TOP [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source tb_TOP.tcl
+close_sim
+launch_simulation
+source tb_TOP.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+launch_simulation
+source tb_TOP.tcl
+close_sim
+launch_simulation
+source tb_TOP.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tb_TOP.tcl
+close_sim
+launch_simulation
+source tb_TOP.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_sim

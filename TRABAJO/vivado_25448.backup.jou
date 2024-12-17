@@ -1,0 +1,161 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec 16 16:51:04 2024
+# Process ID: 25448
+# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18844 C:\Users\tomeu\Desktop\C\github\SED_BAF\TRABAJO\TRABAJO.xpr
+# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/vivado.log
+# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO\vivado.jou
+# Running On        :DESKTOP-49RGDTP
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16479 MB
+# Swap memory       :6174 MB
+# Total Virtual     :22653 MB
+# Available Virtual :9200 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Dec_7_seg.vhd C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/clock_divider.vhd C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Dec_3_8.vhd}
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/MUX.vhd C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Counter.vhd}
+update_compile_order -fileset sources_1
+close [ open C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd w ]
+add_files C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SUPER_TOP [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/TOP_display.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+close_project
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.xpr
+update_compile_order -fileset sources_1
+set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager

@@ -1,7 +1,7 @@
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TOP_display_behav xil_defaultlib.TOP_display -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot f_divider_tb_behav xil_defaultlib.f_divider_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,10 +11,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.contador_0_a_7 [contador_0_a_7_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_32bit_4out [mux_32bit_4out_default]
-Compiling architecture behavioral of entity xil_defaultlib.bcd_to_7seg [bcd_to_7seg_default]
-Compiling architecture behavioral of entity xil_defaultlib.binary_3bit_decoder [binary_3bit_decoder_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_display
-Built simulation snapshot TOP_display_behav
+Compiling architecture behavioral of entity xil_defaultlib.f_divider [\f_divider(module=8)\]
+Compiling architecture behavior of entity xil_defaultlib.f_divider_tb
+Built simulation snapshot f_divider_tb_behav

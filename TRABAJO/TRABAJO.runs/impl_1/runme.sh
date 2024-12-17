@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/impl_1'
+HD_PWD='C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -43,6 +43,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log TOP_display.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TOP_display.tcl -notrace
+EAStep vivado -log SUPER_TOP.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source SUPER_TOP.tcl -notrace
 
 

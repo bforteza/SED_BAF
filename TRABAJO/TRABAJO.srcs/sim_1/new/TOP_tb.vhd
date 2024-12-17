@@ -1,83 +1,107 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
+-- Test Bench Entity
 entity tb_TOP is
 end tb_TOP;
 
-architecture tb of tb_TOP is
+architecture TB of tb_TOP is
 
-    component TOP
-        port (IO_BCD     : inout std_logic_vector (31 downto 0);
-              CLK        : in std_logic;
-              RESET      : in std_logic;
-              START_STOP : in std_logic;
-              I_U        : in std_logic;
-              I_L        : in std_logic;
-              I_R        : in std_logic;
-              I_D        : in std_logic);
-    end component;
+  -- Component Declaration for the TOP entity
+  component TOP
+    port (
+      IO_BCD      : inout std_logic_vector(31 downto 0);
+      CLK         : in std_logic;
+      RESET       : in std_logic;
+      START_STOP  : in std_logic;
+      I_U         : in std_logic;
+      I_L         : in std_logic;
+      I_R         : in std_logic;
+      I_D         : in std_logic
+    );
+  end component;
 
-    signal IO_BCD     : std_logic_vector (31 downto 0);
-    signal CLK        : std_logic;
-    signal RESET      : std_logic;
-    signal START_STOP : std_logic;
-    signal I_U        : std_logic;
-    signal I_L        : std_logic;
-    signal I_R        : std_logic;
-    signal I_D        : std_logic;
+  -- Signals for Stimuli
+  signal IO_BCD      : std_logic_vector(31 downto 0) := (others => 'Z');
+  signal CLK         : std_logic := '0';
+  signal RESET       : std_logic := '0';
+  signal START_STOP  : std_logic := '0';
+  signal I_U         : std_logic := '0';
+  signal I_L         : std_logic := '0';
+  signal I_R         : std_logic := '0';
+  signal I_D         : std_logic := '0';
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
-    signal TbClock : std_logic := '0';
-    signal TbSimEnded : std_logic := '0';
+  -- Clock Period
+  constant CLK_PERIOD : time := 10 ns;
 
 begin
+  -- Instantiate the TOP component
+  uut: TOP
+    port map (
+      IO_BCD     => IO_BCD,
+      CLK        => CLK,
+      RESET      => RESET,
+      START_STOP => START_STOP,
+      I_U        => I_U,
+      I_L        => I_L,
+      I_R        => I_R,
+      I_D        => I_D
+    );
 
-    dut : TOP
-    port map (IO_BCD     => IO_BCD,
-              CLK        => CLK,
-              RESET      => RESET,
-              START_STOP => START_STOP,
-              I_U        => I_U,
-              I_L        => I_L,
-              I_R        => I_R,
-              I_D        => I_D);
+  -- Clock Process
+  CLK_PROCESS: process
+  begin
+    while true loop
+      CLK <= '0';
+      wait for CLK_PERIOD / 2;
+      CLK <= '1';
+      wait for CLK_PERIOD / 2;
+    end loop;
+  end process;
 
-    -- Clock generation
-    TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
+  -- Stimulus Process
+  STIMULUS_PROCESS: process
+  begin
+    -- Initial Reset
+    RESET <= '1';
+    wait for 20 ns;
+    RESET <= '0';
+    wait for 20 ns;
 
-    -- EDIT: Check that CLK is really your main clock signal
-    CLK <= TbClock;
+    IO_BCD <= "00000000000000000000000000000000";
+    wait for 20 ns;
+    
+  
+    START_STOP <= '1';
+    wait for 2000 ns;
+    START_STOP <= '0';
+    wait for 1000 ns;
+    IO_BCD <= (others => 'Z');
+    
 
-    stimuli : process
-    begin
-        -- EDIT Adapt initialization as needed
-        RESET <= '0';
-        START_STOP <= '0';
-        I_U <= '0';
-        I_L <= '0';
-        I_R <= '0';
-        I_D <= '0';
-        
-        IO_BCD <= "0000 0001 0000 0000 0110 0000 0000 0000"
-        -- EDIT Add stimuli here
-        START_STOP <= '1';
-        wait for 20 * TbPeriod;
-        START_STOP <= '1';
-        wait for 100 * TbPeriod;
+    -- Input Up
+    I_U <= '1';
+    wait for 800 ns;
+    I_U <= '0';
 
-        -- Stop the clock and hence terminate the simulation
-        TbSimEnded <= '1';
-        wait;
-    end process;
+    -- Input Left
+    I_L <= '1';
+    wait for 800 ns;
+    I_L <= '0';
 
-end tb;
+    -- Input Right
+    I_R <= '1';
+    wait for 800 ns;
+    I_R <= '0';
 
--- Configuration block below is required by some simulators. Usually no need to edit.
+    -- Input Down
+    I_D <= '1';
+    wait for 800 ns;
+    I_D <= '0';
 
-configuration cfg_tb_TOP of tb_TOP is
-    for tb
-    end for;
-end cfg_tb_TOP;
+    -- Observe Output for a Few Clock Cycles
+    wait;
+  end process;
 
-
-end Behavioral;
+end TB;

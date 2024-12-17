@@ -25,7 +25,7 @@ use IEEE.std_logic_1164.all;
 entity TOP_display is
   port (
     CLK       : in  std_logic;                    -- Señal de reloj
-    --data_in   : in  std_logic_vector(31 downto 0); -- Entrada externa de 32 bits
+    data_in   : in  std_logic_vector(31 downto 0); -- Entrada externa de 32 bits
     seg       : out std_logic_vector(6 downto 0);  -- Salida al display de 7 segmentos
     AN      : out std_logic_vector(7 downto 0)   -- Salidas de activación de los display
   );
@@ -37,8 +37,7 @@ architecture Behavioral of TOP_display is
   -- Señales internas
   signal contador_out : std_logic_vector(2 downto 0); -- Salida del contador (3 bits)
   signal mux_out      : std_logic_vector(3 downto 0); -- Salida del MUX (4 bits)
-  signal decoder_out  : std_logic_vector(7 downto 0); -- Salida del decodificador binario (8 bits)
-  signal data_in      : std_logic_vector(31 downto 0) := "00100001010001100000001001000111" ; 
+  signal decoder_out  : std_logic_vector(7 downto 0); -- Salida del decodificador binario (8 bits) 
   signal clk_div      : std_logic;
 begin
 

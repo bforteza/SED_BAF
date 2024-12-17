@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ferni/OneDrive/Documentos/GitHub/SED_BAF/TRABAJO/TRABAJO.runs/synth_1'
+HD_PWD='C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log TOP_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_display.tcl
+EAStep vivado -log SUPER_TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SUPER_TOP.tcl
