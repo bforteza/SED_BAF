@@ -14,9 +14,8 @@ entity TOP is
   I_L : in std_logic;
   I_R : in std_logic;
   I_D : in std_logic;
-  L_T : out std_logic;
-  L_D : out std_logic;
-  SW : in std_logic
+  LOAD : out std_logic
+
   
     );
 end TOP;
@@ -31,9 +30,7 @@ component FSM is
   S : out std_logic_vector(2 downto 0);
   START_STOP : in std_logic;
   ENABLE: out std_logic;
-  SW: in std_logic;
-  L_T : out std_logic;
-  L_D : out std_logic
+  LOAD: out std_logic
   );
 end component;
 
@@ -106,9 +103,8 @@ u_FSM : FSM
   S => SEL,
   START_STOP => START_STOP_EDG,
   ENABLE => ENABLE,
-  L_D => L_D,
-  L_T => L_T,
-  SW => SW
+  LOAD => LOAD
+
   );
 
 -- DIGIT_FLASH Instance

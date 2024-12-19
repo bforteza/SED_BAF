@@ -88,6 +88,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/imports/new/clock_divider.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/imports/new/TOP_display.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/imports/new/top_timer.vhd
+  C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/new/TOP_DESPERTADOR.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/imports/new/TIME_ADDER.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/imports/new/asdf.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/imports/new/dms_counter.vhd

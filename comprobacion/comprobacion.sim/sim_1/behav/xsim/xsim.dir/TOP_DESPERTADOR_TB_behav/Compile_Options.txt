@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "TOP_DESPERTADOR_TB_behav" "xil_defaultlib.TOP_DESPERTADOR_TB" -log "elaborate.log" 

@@ -16,7 +16,7 @@ entity SUPER_TOP is
   I_R : in std_logic;
   I_D : in std_logic;
   SW : in std_logic;
-  
+  LED: out std_logic_vector(15 downto 0);
   seg     : out std_logic_vector(6 downto 0);  -- Salida al display de 7 segmentos
   AN      : out std_logic_vector(7 downto 0)   -- Salidas de activación de los display
   );
@@ -24,8 +24,8 @@ end SUPER_TOP;
 
 architecture Behavioral of SUPER_TOP is
 signal data : std_logic_vector(31 downto 0) :="00000000000000000000000000000000";
-signal L_T : std_logic := '0';
-signal L_D : std_logic := '1';
+signal load : std_logic;
+signal alarm : std_logic;
 begin
 U1: entity work.TOP
   Port map (
@@ -37,9 +37,7 @@ U1: entity work.TOP
     I_L => I_L,
     I_R => I_R,
     I_D => I_D,
-    L_T => L_T,
-    SW => SW,
-    L_D => L_D
+    LOAD => load
   );
 
 U2: entity work.TOP_display
@@ -53,8 +51,21 @@ U3: entity work.top_timer
     Port map (
     CLK   => CLK,                           -- Señal de reloj
     RESET => not RESET,                         -- Reset asíncrono activo alto  
-    LOAD => L_T,                               -- Señal de entradad de datos
+    LOAD => load and sw,                               -- Señal de entradad de datos
     DATA => data,
-    ENABLE => not L_D
+    ENABLE => SW
     );
+
+
+U4: entity work.TOP_DESPERTADOR
+    Port map(
+  CLK => CLK,
+  ENABLE => not SW, 
+  DATA => data,
+  LOAD => LOAD and not SW,
+  RESET => not RESET,
+  STOP_ALARM => load and SW,
+  ALARM => ALARM
+   );
+   LED <= (others => ALARM);
 end Behavioral;

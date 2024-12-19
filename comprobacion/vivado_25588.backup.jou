@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Dec 19 16:55:43 2024
-# Process ID: 5756
-# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/synth_1
-# Command line: vivado.exe -log SUPER_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SUPER_TOP.tcl
-# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/synth_1/SUPER_TOP.vds
-# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/synth_1\vivado.jou
+# Start of session at: Thu Dec 19 12:12:21 2024
+# Process ID: 25588
+# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5612 C:\Users\tomeu\Desktop\C\github\SED_BAF\comprobacion\comprobacion.xpr
+# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/vivado.log
+# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion\vivado.jou
 # Running On        :DESKTOP-49RGDTP
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -19,6 +19,8 @@
 # Host memory       :16479 MB
 # Swap memory       :6174 MB
 # Total Virtual     :22653 MB
-# Available Virtual :13510 MB
+# Available Virtual :9081 MB
 #-----------------------------------------------------------
-source SUPER_TOP.tcl -notrace
+start_gui
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.xpr
+update_compile_order -fileset sources_1

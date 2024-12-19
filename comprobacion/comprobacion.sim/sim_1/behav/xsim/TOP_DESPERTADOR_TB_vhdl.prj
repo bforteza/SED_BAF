@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../comprobacion.srcs/sources_1/new/TOP_DESPERTADOR.vhd" \
+"../../../../comprobacion.srcs/sim_1/new/simulador_despertador.vhd" \
+
+# Do not sort compile order
+nosort

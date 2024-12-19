@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Dec 19 10:03:39 2024
-# Process ID: 9288
+# Start of session at: Thu Dec 19 15:45:41 2024
+# Process ID: 1288
 # Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18244 C:\Users\tomeu\Desktop\C\github\SED_BAF\comprobacion\comprobacion.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2428 C:\Users\tomeu\Desktop\C\github\SED_BAF\comprobacion\comprobacion.xpr
 # Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/vivado.log
 # Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion\vivado.jou
 # Running On        :DESKTOP-49RGDTP
@@ -19,31 +19,43 @@
 # Host memory       :16479 MB
 # Swap memory       :6174 MB
 # Total Virtual     :22653 MB
-# Available Virtual :8879 MB
+# Available Virtual :16768 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.xpr
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-update_compile_order -fileset sources_1
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
 open_hw_manager
 connect_hw_server -allow_non_jtag
 open_hw_target
@@ -58,29 +70,6 @@ refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-close_hw_manager
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
@@ -89,55 +78,16 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-close_hw_manager
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 open_run impl_1
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-close_hw_manager
-close_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-open_hw_manager
-close_hw_manager
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
@@ -145,25 +95,7 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-close_hw_manager
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.runs/impl_1/SUPER_TOP.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim

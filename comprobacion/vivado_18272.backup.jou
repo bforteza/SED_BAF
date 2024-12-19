@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Dec 19 12:14:29 2024
+# Process ID: 18272
+# Current directory: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12032 C:\Users\tomeu\Desktop\C\github\SED_BAF\comprobacion\comprobacion.xpr
+# Log file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/vivado.log
+# Journal file: C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion\vivado.jou
+# Running On        :DESKTOP-49RGDTP
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16479 MB
+# Swap memory       :6174 MB
+# Total Virtual     :22653 MB
+# Available Virtual :9386 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.xpr
+update_compile_order -fileset sources_1
+file mkdir C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/new
+close [ open C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/new/TOP_DESPERTADOR.vhd w ]
+add_files C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sources_1/new/TOP_DESPERTADOR.vhd
+update_compile_order -fileset sources_1
+file mkdir C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sim_1/new/simulador_despertador.vhd w ]
+add_files -fileset sim_1 C:/Users/tomeu/Desktop/C/github/SED_BAF/comprobacion/comprobacion.srcs/sim_1/new/simulador_despertador.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TOP_DESPERTADOR_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+launch_simulation -mode post-synthesis -type functional
+close_sim
+launch_simulation
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
+launch_simulation
+source TOP_DESPERTADOR_TB.tcl
+close_sim
