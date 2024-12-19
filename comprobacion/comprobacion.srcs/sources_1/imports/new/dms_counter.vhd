@@ -12,7 +12,8 @@ entity counter is
     C_IN   : in  std_logic;                          -- Señal de acarreo (overflow) del primer contador
     DATA   : inout std_logic_vector(3 downto 0);     -- Puerto de datos bidireccional para el segundo contador
     C_OUT  : out std_logic;                          -- Señal de acarreo (overflow) del segundo contador
-    LOAD   : in std_logic                            -- Señal de carga
+    LOAD   : in std_logic;
+    OUT_E : in std_logic                            -- Señal de carga
   );
 end counter;
 
@@ -50,5 +51,5 @@ begin
 
   -- Control de salida de DATA: solo escribir cuando LOAD = '0'
   C_OUT <=  '0' when RESET = '1' ELSE C_IN WHEN aux = SIZE else '0';
-  DATA <= (others => '0') when RESET = '1' else std_logic_vector(aux) when LOAD = '0' else (others => 'Z');
+  DATA <= (others => '0') when RESET = '1' else (others => 'Z') when OUT_E = '0' else std_logic_vector(aux) when LOAD = '0' else (others => 'Z');
 end Behavioral;

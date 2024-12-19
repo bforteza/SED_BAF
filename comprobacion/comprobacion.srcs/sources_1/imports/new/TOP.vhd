@@ -14,7 +14,9 @@ entity TOP is
   I_L : in std_logic;
   I_R : in std_logic;
   I_D : in std_logic;
-  LOAD : out std_logic
+  L_T : out std_logic;
+  L_D : out std_logic;
+  SW : in std_logic
   
     );
 end TOP;
@@ -28,7 +30,10 @@ component FSM is
   I_L , I_R : in std_logic;
   S : out std_logic_vector(2 downto 0);
   START_STOP : in std_logic;
-  ENABLE: out std_logic
+  ENABLE: out std_logic;
+  SW: in std_logic;
+  L_T : out std_logic;
+  L_D : out std_logic
   );
 end component;
 
@@ -91,7 +96,7 @@ signal START_STOP_EDG : std_logic;
 
 
 begin
-LOAD <= enable;
+
 u_FSM : FSM 
   Port map( 
   CLK =>   CLK,
@@ -100,7 +105,10 @@ u_FSM : FSM
   I_R => I_R_EDG,
   S => SEL,
   START_STOP => START_STOP_EDG,
-  ENABLE => ENABLE
+  ENABLE => ENABLE,
+  L_D => L_D,
+  L_T => L_T,
+  SW => SW
   );
 
 -- DIGIT_FLASH Instance

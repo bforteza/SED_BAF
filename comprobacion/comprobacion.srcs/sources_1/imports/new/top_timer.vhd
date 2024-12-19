@@ -10,7 +10,8 @@ entity top_timer is
     CLK      : in  std_logic;                          -- Señal de reloj
     RESET    : in  std_logic;                          -- Reset asíncrono activo alto
     LOAD     : in std_logic;                           -- Señal de entradad de datos
-    DATA     : inout std_logic_vector (31 downto 0)    -- Datos bidireccionales
+    DATA     : inout std_logic_vector (31 downto 0);    -- Datos bidireccionales
+    ENABLE : in std_logic
     );
 end top_timer;
 
@@ -47,7 +48,8 @@ signal c_dmin: std_logic;
     C_IN   : in  std_logic;                           -- Señal de acarreo (overflow) del primer contador
     DATA   : inout std_logic_vector(3 downto 0); -- Puerto de datos bidireccional para el segundo contador
     C_OUT : out std_logic; -- Señal de acarreo (overflow) del segundo contador
-    LOAD : in std_logic                           
+    LOAD : in std_logic;
+    OUT_E : in std_logic                           
   );
 end component;
 
@@ -60,7 +62,8 @@ end component;
     RESET  : in  std_logic;                          -- Reset asíncrono activo alto
     C_IN   : in  std_logic;                           -- Señal de acarreo (overflow) del primer contador
     DATA   : inout std_logic_vector(7 downto 0); -- Puerto de datos bidireccional para el segundo contador
-    LOAD : in std_logic  
+    LOAD : in std_logic;
+    OUT_E : in std_logic  
     );  
 end component;
 
@@ -91,7 +94,8 @@ Inst_counterums: counter
       LOAD => LOAD,
       C_IN => c_fdivider,
       DATA => DATA(3 downto 0),
-      C_OUT => c_ums
+      C_OUT => c_ums,
+      OUT_E => ENABLE
       );
       
     Inst_counterdms: counter 
@@ -104,7 +108,8 @@ Inst_counterums: counter
       LOAD => LOAD,
       C_IN => c_ums,
       DATA => DATA(7 downto 4),
-      C_OUT => c_dms
+      C_OUT => c_dms,
+      OUT_E => ENABLE
       );      
  
  Inst_counterus: counter 
@@ -117,7 +122,8 @@ Inst_counterums: counter
       LOAD => LOAD,
       C_IN => c_dms,
       DATA => DATA(11 downto 8),
-      C_OUT => c_us
+      C_OUT => c_us,
+      OUT_E => ENABLE
       );     
       
     Inst_counterds: counter 
@@ -130,7 +136,8 @@ Inst_counterums: counter
       LOAD => LOAD,
       C_IN => c_us,
       DATA => DATA(15 downto 12),
-      C_OUT => c_ds
+      C_OUT => c_ds,
+      OUT_E => ENABLE
       );      
       
     Inst_counterumin: counter 
@@ -143,7 +150,8 @@ Inst_counterums: counter
       LOAD => LOAD,
       C_IN => c_ds,
       DATA => DATA(19 downto 16),
-      C_OUT => c_umin
+      C_OUT => c_umin,
+      OUT_E => ENABLE
       );      
       
     Inst_counterdmin: counter 
@@ -156,7 +164,8 @@ Inst_counterums: counter
       LOAD => LOAD,
       C_IN => c_umin,
       DATA => DATA(23 downto 20),
-      C_OUT => c_dmin
+      C_OUT => c_dmin,
+      OUT_E => ENABLE
       );      
       
       Inst_hour_counter: hour_counter
@@ -168,7 +177,8 @@ Inst_counterums: counter
       RESET => RESET,
       LOAD => LOAD,
       C_IN => c_dmin,
-      DATA => DATA(31 downto 24)
+      DATA => DATA(31 downto 24),
+      OUT_E => ENABLE
       );
       
       

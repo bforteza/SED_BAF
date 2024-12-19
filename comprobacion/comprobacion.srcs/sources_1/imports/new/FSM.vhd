@@ -33,17 +33,20 @@ use ieee.numeric_std.all;
 
 entity FSM is
   Port ( 
-  CLK : in std_logic;
+  CLK : in std_logic; --Reloj
   RESET: in std_logic;
   I_L , I_R : in std_logic;
   S : out std_logic_vector(2 downto 0);
   START_STOP : in std_logic;
-  ENABLE: out std_logic
+  L_T : out std_logic; -- Load timer
+  L_D : out std_logic; -- Load despertador
+  ENABLE: out std_logic;
+  SW: in std_logic
   );
 end FSM;
 
 architecture behavioral of FSM is
-  type STATES is (REST, ACTIVE);
+  type STATES is (REST, A_T, A_D);
   signal selector : unsigned(2 downto 0):= "100";
   signal current_state: STATES;
   signal next_state: STATES;
@@ -56,7 +59,7 @@ begin
     elsif CLK'event and CLK = '1' then
       current_state <= next_state; 
       --Selector value while active
-       if current_state = ACTIVE then
+       if current_state = A_T or current_state = A_D then
             if I_L = '1' then
                 selector <= selector +1;
             elsif I_R = '1' then
@@ -71,10 +74,17 @@ begin
     next_state <= current_state;
     case current_state is
       when REST =>
-        if START_STOP = '1' then      
-          next_state <= ACTIVE;
+        if START_STOP = '1' and SW = '0' then      
+          next_state <= A_D ;
         end if;
-      when ACTIVE =>
+        if START_STOP = '1' and SW = '1' then      
+          next_state <= A_T ;
+        end if;
+      when A_T =>
+        if START_STOP = '1' then      
+          next_state <= REST;
+        end if;
+       when A_D =>
         if START_STOP = '1' then      
           next_state <= REST;
         end if;
@@ -88,10 +98,16 @@ begin
     case current_state is
       when REST =>
        ENABLE  <= '0';
-       
-      when ACTIVE =>
+       L_T <= '0';
+       L_D <= '0'; 
+      when A_T =>
        ENABLE <= '1'; 
-       
+       L_T <= '1';
+       L_D <= '0';
+      when A_D =>
+       ENABLE <= '1'; 
+       L_T <= '0';
+       L_D <= '1'; 
       when others => 
         
     end case;

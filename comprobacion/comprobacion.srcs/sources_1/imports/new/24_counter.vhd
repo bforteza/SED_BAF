@@ -33,7 +33,8 @@ entity hour_counter is
     RESET  : in  std_logic;                          -- Reset asíncrono activo alto
     C_IN   : in  std_logic;                           -- Señal de acarreo (overflow) del primer contador
     DATA   : inout std_logic_vector(7 downto 0); -- Puerto de datos bidireccional para el segundo contador
-    LOAD : in std_logic
+    LOAD : in std_logic;
+    OUT_E : in std_logic
     ); 
 end hour_counter;
 
@@ -46,6 +47,7 @@ begin
       -- Reset: Reinicia el contador a 0
       aux := (others => '0');    
     elsif rising_edge(CLK) then
+    if OUT_E = '1' then
      if LOAD = '1'  then
         DATA <= (OTHERS => 'Z');
         -- Carga del valor desde el puerto `DATA` cuando no está en alta impedancia
@@ -66,6 +68,9 @@ begin
         
         DATA <= std_logic_vector(aux); 
       end if;
+    else 
+        Data <= (others => 'Z');
+    end if;
     end if;
   end process;
  
