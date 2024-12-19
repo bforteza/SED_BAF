@@ -52,7 +52,7 @@ begin
         aux := unsigned(DATA);
       elsif LOAD = '0' then
         if C_IN = '1' then 
-            if aux = SIZE -1 then
+            if aux = SIZE - 1 then
                 aux := "00000000";
             else
                 aux := aux + 1;

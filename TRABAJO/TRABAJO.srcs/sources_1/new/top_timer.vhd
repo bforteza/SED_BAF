@@ -35,7 +35,6 @@ entity top_timer is
   port (
     CLK      : in  std_logic;                          -- Señal de reloj
     RESET    : in  std_logic;                          -- Reset asíncrono activo alto
-    CE_IN    : in std_logic := '1';
     LOAD     : in std_logic;                           -- Señal de entradad de datos
     DATA     : inout std_logic_vector (31 downto 0)    -- Datos bidireccionales
     );
@@ -104,7 +103,7 @@ Inst_fdivider: fdivider
 port map(
     CLK => CLK,
     RESET => RESET,
-    CE_IN => CE_IN,
+    CE_IN => '1',
     CE_OUT => c_fdivider
     );
 
@@ -149,7 +148,7 @@ Inst_counterums: counter
       
     Inst_counterds: counter 
      generic map (
-      SIZE => 6  -- Asignación del genérico SIZE a 8
+      SIZE => 5  -- Asignación del genérico SIZE a 8
     )
     port map(
       CLK => CLK,
@@ -175,7 +174,7 @@ Inst_counterums: counter
       
     Inst_counterdmin: counter 
      generic map (
-      SIZE => 6  -- Asignación del genérico SIZE a 8
+      SIZE => 5  -- Asignación del genérico SIZE a 8
     )
     port map(
       CLK => CLK,
@@ -188,7 +187,7 @@ Inst_counterums: counter
       
       Inst_hour_counter: hour_counter
      generic map (
-      SIZE => 24  -- Asignación del genérico SIZE a 8
+      SIZE => 23 -- Asignación del genérico SIZE a 8
     )
     port map(
       CLK => CLK,

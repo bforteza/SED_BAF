@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Dec 17 17:30:08 2024
+  **** Start of session at: Wed Dec 18 11:10:55 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source SUPER_TOP.tcl -notrace
-create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 539.156 ; gain = 237.875
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 538.773 ; gain = 237.109
 Command: read_checkpoint -auto_incremental -incremental C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/TOP.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,61 +27,63 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14532
+INFO: [Synth 8-7075] Helper process launched with PID 19028
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1406.688 ; gain = 447.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1406.059 ; gain = 448.773
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:63]
-WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd:31]
+WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:64]
+WARNING: [Synth 8-9112] actual for formal port 'f_enable' is neither a static name nor a globally static expression [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:113]
+WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd:32]
+WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd:51]
 INFO: [Synth 8-638] synthesizing module 'SUPER_TOP' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:21]
-INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd:34' bound to instance 'u_FSM' of component 'FSM' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:22]
+INFO: [Synth 8-3491] module 'FSM' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd:34' bound to instance 'u_FSM' of component 'FSM' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:95]
 INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd:45]
 INFO: [Synth 8-226] default block is never used [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd:72]
 INFO: [Synth 8-226] default block is never used [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd:88]
 INFO: [Synth 8-256] done synthesizing module 'FSM' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/FSM.vhd:45]
-INFO: [Synth 8-3491] module 'DIGIT_FLASH' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:4' bound to instance 'u_DIGIT_FLASH' of component 'DIGIT_FLASH' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:105]
-INFO: [Synth 8-638] synthesizing module 'DIGIT_FLASH' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:15]
+INFO: [Synth 8-3491] module 'DIGIT_FLASH' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:4' bound to instance 'u_DIGIT_FLASH' of component 'DIGIT_FLASH' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'DIGIT_FLASH' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:16]
 	Parameter MODULE bound to: 40000000 - type: integer 
-INFO: [Synth 8-3491] module 'f_divider' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/f_divider.vhd:8' bound to instance 'f_divider_inst' of component 'f_divider' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:59]
+INFO: [Synth 8-3491] module 'f_divider' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/f_divider.vhd:8' bound to instance 'f_divider_inst' of component 'f_divider' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:60]
 INFO: [Synth 8-638] synthesizing module 'f_divider' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/f_divider.vhd:21]
 	Parameter MODULE bound to: 40000000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'f_divider' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/f_divider.vhd:21]
 	Parameter WIDHT bound to: 3 - type: integer 
-INFO: [Synth 8-3491] module 'DECODER' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DECODER.vhd:34' bound to instance 'decoder_inst' of component 'DECODER' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:71]
+INFO: [Synth 8-3491] module 'DECODER' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DECODER.vhd:34' bound to instance 'decoder_inst' of component 'DECODER' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:72]
 INFO: [Synth 8-638] synthesizing module 'DECODER' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DECODER.vhd:44]
 	Parameter WIDHT bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'DECODER' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DECODER.vhd:44]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
 INFO: [Synth 8-638] synthesizing module 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:38]
 INFO: [Synth 8-256] done synthesizing module 'CHANEL' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:38]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:85]
-INFO: [Synth 8-256] done synthesizing module 'DIGIT_FLASH' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:15]
-INFO: [Synth 8-3491] module 'TIME_ADDER' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd:35' bound to instance 'u_TIME_ADDER' of component 'TIME_ADDER' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:116]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-3491] module 'CHANEL' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd:26' bound to instance 'chanel_inst' of component 'CHANEL' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'DIGIT_FLASH' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DIGIT_FLASH.vhd:16]
+INFO: [Synth 8-3491] module 'TIME_ADDER' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd:35' bound to instance 'u_TIME_ADDER' of component 'TIME_ADDER' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:119]
 INFO: [Synth 8-638] synthesizing module 'TIME_ADDER' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd:46]
 INFO: [Synth 8-226] default block is never used [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd:82]
 INFO: [Synth 8-256] done synthesizing module 'TIME_ADDER' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd:46]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_U' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:127]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_U' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:11]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_D' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:134]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_L' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:141]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_R' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:148]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_START' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:155]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_START' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:163]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_D' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:137]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_L' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:144]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_R' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:151]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SINCRO.vhd:4' bound to instance 'u_SYNCHRNZR_START' of component 'SYNCHRNZR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:158]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_START' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:166]
 INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:12]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_R' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:171]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_L' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:178]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_U' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:185]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_D' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:191]
-INFO: [Synth 8-256] done synthesizing module 'TOP' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:21]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_R' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:174]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_L' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:181]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_U' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:188]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd:4' bound to instance 'u_EDGEDTCTR_D' of component 'EDGEDTCTR' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd:22]
 INFO: [Synth 8-638] synthesizing module 'TOP_display' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd:34]
 INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/clock_divider.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'clock_divider' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/clock_divider.vhd:33]
@@ -96,21 +98,51 @@ INFO: [Synth 8-638] synthesizing module 'binary_3bit_decoder' [C:/Users/tomeu/De
 INFO: [Synth 8-226] default block is never used [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Dec_3_8.vhd:38]
 INFO: [Synth 8-256] done synthesizing module 'binary_3bit_decoder' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Dec_3_8.vhd:31]
 INFO: [Synth 8-256] done synthesizing module 'TOP_display' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'top_timer' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:44]
+	Parameter module bound to: 1000000 - type: integer 
+INFO: [Synth 8-3491] module 'fdivider' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/fdivider.vhd:34' bound to instance 'Inst_fdivider' of component 'fdivider' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'fdivider' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/fdivider.vhd:46]
+	Parameter module bound to: 1000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fdivider' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/fdivider.vhd:46]
+	Parameter SIZE bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:6' bound to instance 'Inst_counterums' of component 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:20]
+	Parameter SIZE bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:20]
+	Parameter SIZE bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:6' bound to instance 'Inst_counterdms' of component 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:124]
+	Parameter SIZE bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:6' bound to instance 'Inst_counterus' of component 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:137]
+	Parameter SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:6' bound to instance 'Inst_counterds' of component 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'counter__parameterized2' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:20]
+	Parameter SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter__parameterized2' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:20]
+	Parameter SIZE bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:6' bound to instance 'Inst_counterumin' of component 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:163]
+	Parameter SIZE bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd:6' bound to instance 'Inst_counterdmin' of component 'counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:176]
+	Parameter SIZE bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'hour_counter' declared at 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/24_counter.vhd:27' bound to instance 'Inst_hour_counter' of component 'hour_counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'hour_counter' [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/24_counter.vhd:40]
+	Parameter SIZE bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hour_counter' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/24_counter.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'top_timer' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'SUPER_TOP' (0#1) [C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd:24]
 WARNING: [Synth 8-7129] Port RESET in module DIGIT_FLASH is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1519.855 ; gain = 560.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1520.949 ; gain = 563.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1519.855 ; gain = 560.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1520.949 ; gain = 563.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1519.855 ; gain = 560.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1520.949 ; gain = 563.664
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1519.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1520.949 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -121,31 +153,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/SUPER_TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1565.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1571.488 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1565.340 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1571.488 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -153,23 +185,26 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 14    
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 20    
 	   2 Input    3 Bit       Adders := 4     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                4 Bit    Registers := 13    
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 19    
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
 	   8 Input    8 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 82    
-	   3 Input    4 Bit        Muxes := 8     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 96    
+	   3 Input    4 Bit        Muxes := 14    
 	   8 Input    4 Bit        Muxes := 16    
 	   2 Input    3 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -186,27 +221,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port RESET in module DIGIT_FLASH is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -224,37 +258,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -264,7 +298,7 @@ Static Shift Register Report:
 +------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name | RTL Name                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|SUPER_TOP   | U1/u_EDGEDTCTR_START/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|SUPER_TOP   | U1/u_EDGEDTCTR_START/sreg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |SUPER_TOP   | U1/u_EDGEDTCTR_R/sreg_reg[0]     | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
 |SUPER_TOP   | U1/u_EDGEDTCTR_L/sreg_reg[0]     | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
 |SUPER_TOP   | U1/u_EDGEDTCTR_U/sreg_reg[0]     | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
@@ -289,43 +323,43 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    15|
-|3     |LUT1   |     5|
-|4     |LUT2   |    49|
-|5     |LUT3   |    24|
-|6     |LUT4   |    65|
-|7     |LUT5   |    75|
-|8     |LUT6   |   103|
-|9     |MUXF7  |     4|
+|2     |CARRY4 |    20|
+|3     |LUT1   |    12|
+|4     |LUT2   |    55|
+|5     |LUT3   |    30|
+|6     |LUT4   |    87|
+|7     |LUT5   |    95|
+|8     |LUT6   |   207|
+|9     |MUXF7  |     3|
 |10    |SRL16E |     5|
-|11    |FDCE   |    14|
-|12    |FDPE   |    17|
-|13    |FDRE   |   127|
+|11    |FDCE   |    55|
+|12    |FDPE   |    29|
+|13    |FDRE   |   165|
 |14    |IBUF   |     7|
 |15    |OBUF   |    15|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:58 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1565.340 ; gain = 560.738
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1565.340 ; gain = 606.223
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1571.488 ; gain = 563.664
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1571.488 ; gain = 614.203
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1565.340 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1571.488 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1565.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1571.488 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 94477080
+Synth Design complete | Checksum: 87febdb3
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+100 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 1565.340 ; gain = 1022.258
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1565.340 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1571.488 ; gain = 1027.531
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1571.488 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.runs/synth_1/SUPER_TOP.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file SUPER_TOP_utilization_synth.rpt -pb SUPER_TOP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 17:31:40 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 11:11:37 2024...

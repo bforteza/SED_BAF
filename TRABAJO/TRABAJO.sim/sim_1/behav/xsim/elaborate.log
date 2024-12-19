@@ -1,7 +1,7 @@
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_TOP_behav xil_defaultlib.tb_TOP -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_top_timer_behav xil_defaultlib.tb_top_timer -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,15 +11,13 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSM [fsm_default]
-Compiling architecture behavioral of entity xil_defaultlib.CHANEL [chanel_default]
-Compiling architecture behavioral of entity xil_defaultlib.f_divider [\f_divider(module=40000000)\]
-Compiling architecture behavioral of entity xil_defaultlib.DECODER [decoder_default]
-Compiling architecture behavioral of entity xil_defaultlib.DIGIT_FLASH [digit_flash_default]
-Compiling architecture behavioral of entity xil_defaultlib.TIME_ADDER [time_adder_default]
-Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
-Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
-Compiling architecture behavioral of entity xil_defaultlib.TOP [top_default]
-Compiling architecture tb of entity xil_defaultlib.tb_top
-Built simulation snapshot tb_TOP_behav
+Compiling architecture behavioral of entity xil_defaultlib.fdivider [\fdivider(module=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(size=9)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(size=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.hour_counter [\hour_counter(size=23)\]
+Compiling architecture behavioral of entity xil_defaultlib.top_timer [top_timer_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_top_timer
+Built simulation snapshot tb_top_timer_behav

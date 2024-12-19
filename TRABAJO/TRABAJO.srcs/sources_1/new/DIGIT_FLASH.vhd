@@ -7,6 +7,7 @@ entity DIGIT_FLASH is
     IO_BCDB : inout std_logic_vector(31 downto 0);
     CLK     : in std_logic;
     ENABLE  : in std_logic;
+    F_ENABLE : in std_logic;
     RESET   : in std_logic;
     SEL       : in std_logic_vector(2 downto 0)
     );
@@ -30,7 +31,7 @@ component CHANEL
 port (
     A      : inout  std_logic_vector (3 downto 0);
     B      : inout std_logic_vector (3 downto 0);
-    ENABLE : in std_logic;
+    ENABLE : in std_logic; 
     D      : in std_logic   -- 0: A -> B, 1: B -> A
   );
 end component;
@@ -60,7 +61,7 @@ f_divider_inst: f_divider
     generic map ( 
       MODULE => 40000000)
     Port map( 
-       RESET  => NOT ENABLE,           -- Conecta RESET
+       RESET  => NOT F_ENABLE,           -- Conecta RESET
        CLK    => CLK,             -- Conecta CLK
        CE_IN  => ENABLE,          -- Habilitación del divisor
        CE_OUT => ce_out_signal    -- Conecta salida a señal intermedia
@@ -74,7 +75,7 @@ decoder_inst: DECODER
     Port map( 
         S      => SEL,               -- Conecta entrada seleccionada
         O      => decoder_output,  -- Conecta salida a señal intermedia
-        ENABLE => ce_out_signal    -- Habilitación desde la señal intermedia
+        ENABLE => ce_out_signal   -- Habilitación desde la señal intermedia
     );
 
 -- Generación de canales usando señales intermedias

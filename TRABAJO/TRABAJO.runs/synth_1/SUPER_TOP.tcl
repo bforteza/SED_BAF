@@ -58,7 +58,6 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -75,6 +74,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/24_counter.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/CHANEL.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/Counter.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/DECODER.vhd
@@ -87,9 +87,12 @@ read_vhdl -library xil_defaultlib {
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/clock_divider.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TOP_display.vhd
+  C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/top_timer.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/TIME_ADDER.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/asdf.vhd
+  C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/dms_counter.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/f_divider.vhd
+  C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/fdivider.vhd
   C:/Users/tomeu/Desktop/C/github/SED_BAF/TRABAJO/TRABAJO.srcs/sources_1/new/SUPER_TOP.vhd
 }
 OPTRACE "Adding files" END { }

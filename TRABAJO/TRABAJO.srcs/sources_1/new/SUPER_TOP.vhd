@@ -23,6 +23,7 @@ end SUPER_TOP;
 
 architecture Behavioral of SUPER_TOP is
 signal data : std_logic_vector(31 downto 0) :="00000000000000000000000000000000";
+signal LOAD : std_logic := '0';
 begin
 U1: entity work.TOP
   Port map (
@@ -33,7 +34,8 @@ U1: entity work.TOP
     I_U => I_U,
     I_L => I_L,
     I_R => I_R,
-    I_D => I_D
+    I_D => I_D,
+    LOAD => LOAD
   );
 
 U2: entity work.TOP_display
@@ -43,5 +45,12 @@ U2: entity work.TOP_display
     seg => seg,
     AN => AN
   );
-
+U3: entity work.top_timer
+    Port map (
+    CLK   => CLK,                           -- Señal de reloj
+    RESET => not RESET,                         -- Reset asíncrono activo alto
+    CE_IN => '1',   
+    LOAD => LOAD,                               -- Señal de entradad de datos
+    DATA => data
+    );
 end Behavioral;
