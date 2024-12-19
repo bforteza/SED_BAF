@@ -61,7 +61,7 @@ f_divider_inst: f_divider
     generic map ( 
       MODULE => 40000000)
     Port map( 
-       RESET  => NOT F_ENABLE or not RESET,           -- Conecta RESET
+       RESET  => NOT F_ENABLE or RESET,           -- Conecta RESET
        CLK    => CLK,             -- Conecta CLK
        CE_IN  => ENABLE,          -- Habilitación del divisor
        CE_OUT => ce_out_signal    -- Conecta salida a señal intermedia
