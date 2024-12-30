@@ -30,7 +30,7 @@ architecture behavior of fdivider_tb is
   -- Clock period definitions
   constant clk_period: time     := 10 ns;
 
-  constant module    : positive := 8;
+  constant module    : positive := 100000;
 
 begin
   -- Instantiate the Unit Under Test (UUT)

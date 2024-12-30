@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: [SUCCESS]: Simulation finished.
+Time: 2000017500 ps  Iteration: 0  Process: /fdivider_tb/stim_proc  File: C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_fdivider.vhd
+$finish called at time : 2000017500 ps : File "C:/Users/Usuario/Documents/GitHub/SED_BAF/TRABAJO/TRABAJO.srcs/sim_1/new/tb_fdivider.vhd" Line 75

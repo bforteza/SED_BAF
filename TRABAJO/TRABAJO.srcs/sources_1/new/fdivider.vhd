@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity fdivider is
   generic (
-    module : positive := 100000000 -- Frecuencia del reloj en Hz (por defecto 100 MHz)
+    module : positive := 100000     --Frecuencia de reloj 100 MHz 
   );
   port (
     RESET  : in  std_logic; -- Señal de reset

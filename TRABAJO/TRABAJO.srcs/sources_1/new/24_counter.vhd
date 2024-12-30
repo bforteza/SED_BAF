@@ -26,13 +26,13 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- Contador de horas (0-23) gobernado por una señal de acarreo
 entity hour_counter is
     generic (
-    SIZE: positive := 24 -- Ancho de los contadores (máximo 4 bits para un contador decimal)
+    SIZE: positive := 24        -- Asignación del genérico SIZE a 24
   );
     port (
-    CLK      : in  std_logic;                          -- Señal de reloj
+    CLK      : in  std_logic;                        -- Señal de reloj
     RESET  : in  std_logic;                          -- Reset asíncrono activo alto
-    C_IN   : in  std_logic;                           -- Señal de acarreo (overflow) del primer contador
-    DATA   : inout std_logic_vector(7 downto 0); -- Puerto de datos bidireccional para el segundo contador
+    C_IN   : in  std_logic;                          -- Señal de acarreo (overflow) del contador anterior
+    DATA   : inout std_logic_vector(7 downto 0);     -- Puerto de datos bidireccional para el contador
     LOAD : in std_logic
     ); 
 end hour_counter;
@@ -40,7 +40,7 @@ end hour_counter;
 architecture behavioral of hour_counter is
 begin
     process (CLK, RESET)
- variable aux: unsigned(7 downto 0) := (others => '0'); 
+ variable aux: unsigned(7 downto 0) := (others => '0');     --Variable auxiliar para la asignación de DATA
   begin
     if RESET = '1' then
       -- Reset: Reinicia el contador a 0
@@ -60,7 +60,7 @@ begin
             
         end if;
         
-        DATA <= std_logic_vector(aux); 
+        DATA <= std_logic_vector(aux);  --Asignación a DATA
       end if;
     end if;
   end process;
