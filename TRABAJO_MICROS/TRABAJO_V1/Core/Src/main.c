@@ -25,7 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "I2C_LCD.h"
+#include "Locker.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,9 +95,19 @@ int main(void)
   MX_I2C1_Init();
   MX_I2S3_Init();
   MX_USB_HOST_Init();
-  KeyPad_Init();
+  MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
+  KeyPad_Init();
+  Locker_Init();
 
+/*
+  I2C_LCD_Init(I2C_LCD_1);
+
+   I2C_LCD_SetCursor(I2C_LCD_1, 0, 0);
+   I2C_LCD_WriteString(I2C_LCD_1, "DeepBlueMbedded");
+   I2C_LCD_SetCursor(I2C_LCD_1, 0, 1);
+   I2C_LCD_WriteString(I2C_LCD_1, "I2C LCD ");
+*/
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,7 +116,31 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-    entrada = KeyPad_WaitForKeyGetChar(0);
+    Locker_open(1); //s
+    HAL_Delay(200);
+    Locker_open(3); //si
+    HAL_Delay(200);
+    Locker_open(5); //si
+	   HAL_Delay(200);
+	Locker_open(7); //si
+	   HAL_Delay(200);
+	Locker_open(9); //si
+	   HAL_Delay(200);
+	Locker_open(11); //si
+	   HAL_Delay(200);
+	Locker_open(12);
+	   HAL_Delay(200);
+	Locker_open(13); //si
+	   HAL_Delay(200);
+	Locker_open(15); //si
+	   HAL_Delay(200);
+	Locker_open(21); //si
+	   HAL_Delay(200);
+	Locker_open(25); //si
+	   HAL_Delay(200);
+
+    Locker_close();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
