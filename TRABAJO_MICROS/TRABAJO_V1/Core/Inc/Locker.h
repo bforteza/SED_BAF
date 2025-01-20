@@ -11,5 +11,4 @@
 void Locker_Init(void);
 void Locker_open(uint8_t lock);
 void Locker_close();
-
 #endif /* INC_LOCKER_H_ */
