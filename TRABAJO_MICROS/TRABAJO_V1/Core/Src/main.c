@@ -20,6 +20,7 @@
 #include "main.h"
 #include "i2c.h"
 #include "i2s.h"
+#include "tim.h"
 #include "usb_host.h"
 #include "gpio.h"
 
@@ -96,10 +97,11 @@ int main(void)
   MX_I2S3_Init();
   MX_USB_HOST_Init();
   MX_I2C3_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   KeyPad_Init();
   Locker_Init();
-
+  HAL_TIM_Base_Start_IT(&htim2);
 /*
   I2C_LCD_Init(I2C_LCD_1);
 
@@ -116,30 +118,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-    Locker_open(1); //s
-    HAL_Delay(200);
-    Locker_open(3); //si
-    HAL_Delay(200);
-    Locker_open(5); //si
-	   HAL_Delay(200);
-	Locker_open(7); //si
-	   HAL_Delay(200);
-	Locker_open(9); //si
-	   HAL_Delay(200);
-	Locker_open(11); //si
-	   HAL_Delay(200);
-	Locker_open(12);
-	   HAL_Delay(200);
-	Locker_open(13); //si
-	   HAL_Delay(200);
-	Locker_open(15); //si
-	   HAL_Delay(200);
-	Locker_open(21); //si
-	   HAL_Delay(200);
-	Locker_open(25); //si
-	   HAL_Delay(200);
-
-    Locker_close();
 
     /* USER CODE BEGIN 3 */
   }
