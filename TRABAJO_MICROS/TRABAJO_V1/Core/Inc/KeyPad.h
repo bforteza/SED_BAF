@@ -4,7 +4,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-
 /*
   Author:     Nima Askari
   WebSite:    http://www.github.com/NimaLTD
@@ -29,7 +28,9 @@ typedef struct
 }KeyPad_t;
 
 void      KeyPad_Init(void);
-uint16_t  KeyPad_WaitForKey(uint32_t	Timeout_ms);
-char      KeyPad_WaitForKeyGetChar(uint32_t	Timeout_ms);
+uint16_t  KeyPad_Scan(void);
+char      KeyPad_GetDetectedChar(void);
+char      KeyPad_GetCharFromKey(uint16_t key);  // Declaración de la función que falta
 
 #endif
+
