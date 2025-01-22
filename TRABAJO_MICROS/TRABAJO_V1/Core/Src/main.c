@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "i2c.h"
 #include "i2s.h"
 #include "tim.h"
@@ -51,6 +52,7 @@
 
 /* USER CODE BEGIN PV */
 Coordinador C;
+uint16_t ANALOG = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,6 +101,7 @@ int main(void)
   MX_USB_HOST_Init();
   MX_TIM6_Init();
   MX_I2C1_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   KeyPad_Init();
  // Locker_Init();
@@ -118,7 +121,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(100));
-
+    HAL_ADC_Start_IT(&hadc1);
+    Coordinador_IN_TIME(&C, ANALOG);
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -173,6 +178,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim){
 // This callback is automatically called by the HAL on the UEV event
 if (htim->Instance == TIM6)
 	 Coordinador_ACTLZR(&C);
+}
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    // Read & Update The ADC Result
+    ANALOG = HAL_ADC_GetValue(&hadc1);
 }
 
 /* USER CODE END 4 */

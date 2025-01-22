@@ -14,7 +14,9 @@ void Coordinador_INIT(Coordinador* C, uint8_t LCD_inst){
 	Pantalla_Conf(&C->pantalla[0],LCD_inst, "Enter ID","", 1, 0,1);
 	Pantalla_Conf(&C->pantalla[1],LCD_inst, "Enter Password","", 1, 0,1);
 	Pantalla_Conf(&C->pantalla[2],LCD_inst, "Enter Key", "", 0,0,0);
-	Pantalla_Conf(&C->pantalla[3],LCD_inst, "Not valid","ID or Password", 0, 1,0);
+	Pantalla_Conf(&C->pantalla[3],LCD_inst, "Invalid","ID, Password or Key", 0, 1,0);
+	Pantalla_Conf(&C->pantalla[4],LCD_inst, "Open","# to return", 0, 1,0);
+	Pantalla_Conf(&C->pantalla[5],LCD_inst, "Set time value","", 0, 1,0);
 
 	 Key keys1[4], keys2[3];
 
@@ -48,6 +50,12 @@ void Coordinador_ACTLZR(Coordinador* C){
 	}
 	memcpy(&C->pantalla_actual, &C->pantalla[C->estado], sizeof(Pantalla));
 
+	switch (C->estado){
+	case tmpconf:
+
+		sprintf(C->pantalla[tmpconf].Inf, "%u MS", C->t_open);
+		break;
+	}
 }
 
 void Coordinador_IN(Coordinador* C, char ent){
@@ -64,7 +72,11 @@ void Coordinador_IN(Coordinador* C, char ent){
 				}else{
 					C->estado = error;
 				}
-			}else{
+			}
+			if (ent == '*'){
+				C->estado = tmpconf;
+			}
+			if (ent != '#' && ent != '*'){
 				strcat(C->pantalla[C->estado].Inf, &temp);
 				C->pantalla[C->estado].C_Cursor++;
 			}
@@ -97,10 +109,10 @@ void Coordinador_IN(Coordinador* C, char ent){
 						if(C->usuario_actual->keys[i].letter == C->entrada[0] &&
 							C->usuario_actual->keys[i].number == C->entrada[1]){
 							//abrir
-							C->estado = user;
+							C->estado = open;
 						}
 					}
-					if(C->estado != user)
+					if(C->estado != open)
 					C->estado = error;
 					memset(C->entrada, 0, sizeof(C->entrada));
 				}
@@ -112,9 +124,22 @@ void Coordinador_IN(Coordinador* C, char ent){
 				C->estado = user;
 			}
 			break;
+		case open:
+			if (ent == '#'){
+				C->estado = keys;
+			}
+			break;
+		case tmpconf:
+			if (ent == '#'){
+				C->estado = user;
+			}
+			break;
 		default:
 			break;
 	}
 	}
 }
 
+void Coordinador_IN_TIME(Coordinador* C, uint16_t t){
+	C->t_open = t;
+}

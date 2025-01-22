@@ -6,7 +6,7 @@
  */
 #include "Pantalla.h"
 #include "Usuario.h"
-#define NUM_MAX_PANTALLAS 4
+#define NUM_MAX_PANTALLAS 6
 #define NUM_MAX_USUARIOS 2
 #define MAX_ENTRADA 4
 #ifndef INC_COORDINADOR_H_
@@ -15,8 +15,10 @@
 enum Estados {
     user,
     adress,
-    keys,  // Asignación manual de valor
-    error       // Este será 6 automáticamente
+    keys,
+    error,
+	open,
+	tmpconf
 };
 
 typedef struct {
@@ -28,6 +30,7 @@ typedef struct {
     uint8_t num_pantallas;
     uint8_t num_usuarios;
     uint8_t n_pantalla;
+    uint16_t t_open;
 
     char entrada[MAX_ENTRADA+1];
     enum Estados estado;
@@ -37,5 +40,5 @@ typedef struct {
 void Coordinador_INIT(Coordinador* C, uint8_t LCD_inst);
 void Coordinador_ACTLZR(Coordinador* C);
 void Coordinador_IN(Coordinador* C, char ent);
-
+void Coordinador_IN_TIME(Coordinador* C, uint16_t t);
 #endif /* INC_COORDINADOR_H_ */
