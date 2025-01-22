@@ -25,6 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "KeyPad.h"
 #include "I2C_LCD.h"
 #include "Locker.h"
 /* USER CODE END Includes */
@@ -114,32 +115,17 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-    MX_USB_HOST_Process();
-    Locker_open(1); //s
-    HAL_Delay(200);
-    Locker_open(3); //si
-    HAL_Delay(200);
-    Locker_open(5); //si
-	   HAL_Delay(200);
-	Locker_open(7); //si
-	   HAL_Delay(200);
-	Locker_open(9); //si
-	   HAL_Delay(200);
-	Locker_open(11); //si
-	   HAL_Delay(200);
-	Locker_open(12);
-	   HAL_Delay(200);
-	Locker_open(13); //si
-	   HAL_Delay(200);
-	Locker_open(15); //si
-	   HAL_Delay(200);
-	Locker_open(21); //si
-	   HAL_Delay(200);
-	Locker_open(25); //si
-	   HAL_Delay(200);
 
-    Locker_close();
+	  char tecla = KeyPad_GetDetectedChar();
+
+	  /*if (tecla != 0) {
+		  printf("%c", tecla);
+	  }*/
+
+	  MX_USB_HOST_Process();  // Procesar el USB Host
+	        HAL_Delay(100);         // Pequeño retardo para evitar saturar el procesador
+    /* USER CODE END WHILE */
+
 
     /* USER CODE BEGIN 3 */
   }
