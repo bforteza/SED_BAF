@@ -6,17 +6,34 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="keys_CNF"/>
 		<list key="findhistory">
+			<item value="conf_keys"/>
+			<item value="Conf_Pantalla"/>
+			<item value="conf_usuario"/>
+			<item value="obtener_llaves_usuario"/>
+			<item value="password_usuario"/>
+			<item value="buscar_usuario"/>
+			<item value="Mostrar_Pantalla"/>
+			<item value="Pantalla_Mostrar"/>
+			<item value="HAL_TIM_PeriodElapsedCallback"/>
 			<item value="GPIO_NOPULL"/>
 			<item value="_KEYPAD_USE_FREERTOS"/>
 		</list>
 		<list key="replacehistory">
+			<item value="keys_CNF"/>
+			<item value="Pantalla_Conf"/>
+			<item value="usuario_CNF"/>
+			<item value="usuario_GET_KEYS"/>
+			<item value="usuario_PSSWRD"/>
+			<item value="usuario_SRCH"/>
+			<item value="Pantalla_PRNT"/>
+			<item value="Pantalla_Mostrar"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="762"/>
-		<item key="DIALOG_Y_ORIGIN" value="222"/>
+		<item key="DIALOG_X_ORIGIN" value="699"/>
+		<item key="DIALOG_Y_ORIGIN" value="199"/>
 		<item key="DIALOG_WIDTH" value="414"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
