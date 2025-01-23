@@ -7,34 +7,35 @@
 
 const GPIO_TypeDef* _KEYPAD_COLUMN_GPIO_PORT[] =
 {
-  GPIOA,
-  GPIOA,
-  GPIOC,
+  GPIOE,
+  GPIOB,
+  GPIOB,
   GPIOB
 };
 
 const uint16_t _KEYPAD_COLUMN_GPIO_PIN[] =
 {
-  GPIO_PIN_5,
-  GPIO_PIN_7,
-  GPIO_PIN_5,
-  GPIO_PIN_1
+  GPIO_PIN_15,
+  GPIO_PIN_11,
+  GPIO_PIN_13,
+  GPIO_PIN_15
 };
 
 const GPIO_TypeDef* _KEYPAD_ROW_GPIO_PORT[] =
 {
-  GPIOC,
-  GPIOC,
-  GPIOA,
-  GPIOA
+  GPIOE,
+  GPIOE,
+  GPIOE,
+  GPIOE
 };
 
 const uint16_t _KEYPAD_ROW_GPIO_PIN[] =
 {
-  GPIO_PIN_1,
-  GPIO_PIN_3,
-  GPIO_PIN_1,
-  GPIO_PIN_3
+  GPIO_PIN_7,
+  GPIO_PIN_9,
+  GPIO_PIN_11,
+  GPIO_PIN_13
 };
 
 #endif
+
