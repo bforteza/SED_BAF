@@ -11,7 +11,7 @@
 const GPIO_TypeDef* LOCKER_GPIO_PORT[] =
 {
   GPIOA, //ON-OFF
-  GPIOA, //S0-S5
+  GPIOA, //LVB
   GPIOA,
   GPIOA,
   GPIOC,
@@ -22,7 +22,7 @@ const GPIO_TypeDef* LOCKER_GPIO_PORT[] =
 const uint16_t LOCKER_GPIO_PIN[] =
 {
   GPIO_PIN_0, //ON-OFF
-  GPIO_PIN_2,
+  GPIO_PIN_2, //LVB
   GPIO_PIN_4,
   GPIO_PIN_6,
   GPIO_PIN_4,

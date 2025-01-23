@@ -10,6 +10,7 @@
 #include <string.h>
 #include "Usuario.h"
 #include "I2C_LCD.h"
+#include "Locker.h"
 void Coordinador_INIT(Coordinador* C, uint8_t LCD_inst){
 	Pantalla_Conf(&C->pantalla[0],LCD_inst, "Enter ID","", 1, 0,1);
 	Pantalla_Conf(&C->pantalla[1],LCD_inst, "Enter Password","", 1, 0,1);
@@ -108,8 +109,9 @@ void Coordinador_IN(Coordinador* C, char ent){
 					for (uint8_t i; i<32; i++){
 						if(C->usuario_actual->keys[i].letter == C->entrada[0] &&
 							C->usuario_actual->keys[i].number == C->entrada[1]){
-							//abrir
+							Locker_open(10);//abrir
 							C->estado = open;
+
 						}
 					}
 					if(C->estado != open)
@@ -126,6 +128,7 @@ void Coordinador_IN(Coordinador* C, char ent){
 			break;
 		case open:
 			if (ent == '#'){
+				Locker_close();
 				C->estado = keys;
 			}
 			break;

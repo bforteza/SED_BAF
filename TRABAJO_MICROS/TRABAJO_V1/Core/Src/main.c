@@ -31,6 +31,7 @@
 #include "Locker.h"
 #include "Pantalla.h"
 #include "Coordinador.h"
+#include "KeyPad.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,9 +105,9 @@ int main(void)
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   KeyPad_Init();
- // Locker_Init();
+// Locker_Init();
   HAL_TIM_Base_Start_IT(&htim6);
-
+  Locker_Init();
    I2C_LCD_Init(I2C_LCD_1);
    Coordinador_INIT(&C, I2C_LCD_1);
 
@@ -120,10 +121,13 @@ int main(void)
     MX_USB_HOST_Process();
 
     /* USER CODE BEGIN 3 */
+
     Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(100));
-    HAL_ADC_Start_IT(&hadc1);
+   HAL_ADC_Start_IT(&hadc1);
     Coordinador_IN_TIME(&C, ANALOG);
     HAL_Delay(10);
+
+
   }
   /* USER CODE END 3 */
 }
