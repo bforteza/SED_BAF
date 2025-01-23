@@ -49,6 +49,9 @@
 
 /* USER CODE BEGIN PV */
 char entrada;
+#define DURACION_TEST_MS 5000	 // Tiempo en milisegundos para mantener cada cerradura abierta
+#define NUM_CERRADURAS 32    // Número total de cerraduras
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,11 +100,11 @@ int main(void)
   MX_I2S3_Init();
   MX_USB_HOST_Init();
   MX_I2C3_Init();
-  MX_TIM2_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
-  KeyPad_Init();
   Locker_Init();
-  HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_Base_Start_IT(&htim7);
+
 /*
   I2C_LCD_Init(I2C_LCD_1);
 
@@ -118,8 +121,9 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-
     /* USER CODE BEGIN 3 */
+    //
+            Locker_open(1,3000);
   }
   /* USER CODE END 3 */
 }
