@@ -19,16 +19,16 @@ void Coordinador_INIT(Coordinador* C, uint8_t LCD_inst){
 	Pantalla_Conf(&C->pantalla[4],LCD_inst, "Open","# to return", 0, 1,0);
 	Pantalla_Conf(&C->pantalla[5],LCD_inst, "Set time value","", 0, 1,0);
 
-	 Key keys1[4], keys2[3];
+	 Key keys1[8], keys2[8];
 
 	    // Definir valores para el primer usuario
-	    char letters1[] = {'A', 'B', 'C', 'D'};
-	    uint8_t numbers1[] = {'1', '2', '3', '4'};
+	    char letters1[] = {'B', 'B', 'B', 'B','B', 'B', 'B', 'B'};
+	    uint8_t numbers1[] = {'1', '2', '3', '4','5','6','7','8'};
 	    uint8_t num_keys1 = sizeof(letters1) / sizeof(letters1[0]);
 
 	    // Definir valores para el segundo usuario
-	    char letters2[] = {'B', 'C', 'D'};
-	    uint8_t numbers2[] = {'7', '8', '2'};
+	    char letters2[] = {'C', 'C', 'C','C','C', 'C', 'C','C'};
+	    uint8_t numbers2[] = {'1', '2', '3', '4','5','6','7','8'};
 	    uint8_t num_keys2 = sizeof(letters2) / sizeof(letters2[0]);
 
 	    // Configurar las llaves para ambos usuarios
@@ -106,13 +106,9 @@ void Coordinador_IN(Coordinador* C, char ent){
 			}else{
 				strcat(C->entrada, &temp);
 				if(strlen(C->entrada)>1){
-					for (uint8_t i; i<32; i++){
-						if(C->usuario_actual->keys[i].letter == C->entrada[0] &&
-							C->usuario_actual->keys[i].number == C->entrada[1]){
-							Locker_open(10);//abrir
-							C->estado = open;
-
-						}
+					if(usuario_KEY(C->usuario_actual, C->entrada[0], C->entrada[1])){
+						C->estado = open;
+						Locker_open_key(C->entrada[0],C->entrada[1]);
 					}
 					if(C->estado != open)
 					C->estado = error;

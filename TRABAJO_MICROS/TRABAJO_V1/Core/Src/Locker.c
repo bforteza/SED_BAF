@@ -48,3 +48,8 @@ void Locker_open(uint8_t lock)
 void Locker_close(){
 	HAL_GPIO_WritePin(LOCKER_GPIO_PORT[0], LOCKER_GPIO_PIN[0], GPIO_PIN_RESET);
 }
+
+void Locker_open_key(char letter, char number){
+	uint8_t code = (int) (letter-'A')*8 + (number - '1');
+	Locker_open(code);
+}

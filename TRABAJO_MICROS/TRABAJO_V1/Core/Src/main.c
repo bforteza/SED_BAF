@@ -53,7 +53,7 @@
 
 /* USER CODE BEGIN PV */
 Coordinador C;
-uint16_t ANALOG = 0;
+
 volatile uint8_t flag = 0;
 /* USER CODE END PV */
 
@@ -112,6 +112,7 @@ int main(void)
    I2C_LCD_Init(I2C_LCD_1);
    Coordinador_INIT(&C, I2C_LCD_1);
 
+   uint32_t previousTick = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -123,7 +124,14 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-    //Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(100));
+    uint32_t currentTick = HAL_GetTick();
+
+    if ((currentTick - previousTick) >= 200)
+           {
+               previousTick = currentTick;
+
+               HAL_ADC_Start_IT(&hadc1);
+           }
 
     if (flag == 1){
     	 Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(0));
@@ -201,13 +209,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim){
 // This callback is automatically called by the HAL on the UEV event
 if (htim->Instance == TIM6)
 	 Coordinador_ACTLZR(&C);
-	HAL_ADC_Start_IT(&hadc1);
-    Coordinador_IN_TIME(&C, ANALOG);
+
+
 }
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
     // Read & Update The ADC Result
-    ANALOG = HAL_ADC_GetValue(&hadc1);
+
+    Coordinador_IN_TIME(&C, HAL_ADC_GetValue(&hadc1));
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)

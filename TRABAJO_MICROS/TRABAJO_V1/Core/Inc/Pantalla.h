@@ -12,8 +12,8 @@
 
 typedef struct {
 	uint8_t LCD_instance;
-    char Sup[40];
-    char Inf[40];
+	char Sup[40];
+	char Inf[40];
 
 	uint8_t C_Cursor;
 	uint8_t R_Cursor;

@@ -28,7 +28,7 @@ typedef struct {
 Usuario* usuario_SRCH(Usuario usuarios[], uint8_t num_usuarios, const char* id);
 _Bool usuario_PSSWRD(Usuario user, const char* PASSWORD);
 void usuario_GET_KEYS(const Usuario *user, char *output, uint8_t output_size);
-
+_Bool usuario_KEY(Usuario *user, char letra, char numero);
 void usuario_CNF(Usuario *usuario, const char *id, const char *password, Key keys[], uint8_t num_keys);
 void keys_CNF(Key keys[], uint8_t num_keys, const char letters[], const char numbers[]);
 

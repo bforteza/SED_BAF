@@ -66,3 +66,15 @@ void keys_CNF(Key keys[], uint8_t num_keys, const char letters[], const char num
         keys[i].number = numbers[i];
     }
 }
+
+_Bool usuario_KEY(Usuario *user, char letra, char numero){
+	for (uint8_t i=0; i<32; i++){
+		if(user->keys[i].letter == letra &&
+			user->keys[i].number == numero){
+			return 1;//abrir
+
+
+		}
+	}
+	return 0;
+}
