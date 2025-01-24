@@ -11,6 +11,8 @@
 #include "Usuario.h"
 #include "I2C_LCD.h"
 #include "Locker.h"
+#include "tim.h"
+
 void Coordinador_INIT(Coordinador* C, uint8_t LCD_inst){
 	Pantalla_Conf(&C->pantalla[0],LCD_inst, "Enter ID","", 1, 0,1);
 	Pantalla_Conf(&C->pantalla[1],LCD_inst, "Enter Password","", 1, 0,1);
@@ -55,6 +57,7 @@ void Coordinador_ACTLZR(Coordinador* C){
 	case tmpconf:
 
 		sprintf(C->pantalla[tmpconf].Inf, "%u MS", C->t_open);
+		CambiarPeriodo_TIM7(C->t_open);
 		break;
 	}
 }
@@ -109,6 +112,7 @@ void Coordinador_IN(Coordinador* C, char ent){
 					if(usuario_KEY(C->usuario_actual, C->entrada[0], C->entrada[1])){
 						C->estado = open;
 						Locker_open_key(C->entrada[0],C->entrada[1]);
+						 HAL_TIM_Base_Start_IT(&htim7);
 					}
 					if(C->estado != open)
 					C->estado = error;

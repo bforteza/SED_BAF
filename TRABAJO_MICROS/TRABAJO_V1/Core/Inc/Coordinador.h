@@ -29,7 +29,6 @@ typedef struct {
     Pantalla pantalla_actual;
     uint8_t num_pantallas;
     uint8_t num_usuarios;
-    uint8_t n_pantalla;
     uint16_t t_open;
 
     char entrada[MAX_ENTRADA+1];

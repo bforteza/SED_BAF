@@ -104,6 +104,7 @@ int main(void)
   MX_TIM6_Init();
   MX_I2C1_Init();
   MX_ADC1_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
   KeyPad_Init();
 // Locker_Init();
@@ -127,11 +128,11 @@ int main(void)
     uint32_t currentTick = HAL_GetTick();
 
     if ((currentTick - previousTick) >= 200)
-           {
-               previousTick = currentTick;
+	   {
+		   previousTick = currentTick;
 
-               HAL_ADC_Start_IT(&hadc1);
-           }
+		   HAL_ADC_Start_IT(&hadc1);
+	   }
 
     if (flag == 1){
     	 Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(0));
@@ -210,7 +211,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim){
 if (htim->Instance == TIM6)
 	 Coordinador_ACTLZR(&C);
 
-
+if (htim->Instance == TIM7)
+	 Locker_close();
 }
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
