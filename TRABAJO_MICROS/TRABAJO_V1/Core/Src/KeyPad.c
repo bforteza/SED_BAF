@@ -23,16 +23,22 @@ void	KeyPad_Init(void)
     gpio.Speed = GPIO_SPEED_FREQ_LOW;
     gpio.Pin = _KEYPAD_COLUMN_GPIO_PIN[i];
     HAL_GPIO_Init((GPIO_TypeDef*)_KEYPAD_COLUMN_GPIO_PORT[i], &gpio);
-    HAL_GPIO_WritePin((GPIO_TypeDef*)_KEYPAD_COLUMN_GPIO_PORT[i], _KEYPAD_COLUMN_GPIO_PIN[i], GPIO_PIN_SET);
+    HAL_GPIO_WritePin((GPIO_TypeDef*)_KEYPAD_COLUMN_GPIO_PORT[i], _KEYPAD_COLUMN_GPIO_PIN[i], GPIO_PIN_RESET);
   }
   for(uint8_t	i=0 ; i<KeyPad.RowSize ; i++)
   {
-    gpio.Mode = GPIO_MODE_INPUT;
-    gpio.Pull = GPIO_PULLUP;
-    gpio.Speed = GPIO_SPEED_FREQ_LOW;
-    gpio.Pin = _KEYPAD_ROW_GPIO_PIN[i];
-    HAL_GPIO_Init((GPIO_TypeDef*)_KEYPAD_ROW_GPIO_PORT[i], &gpio);		
+	  gpio.Mode = GPIO_MODE_IT_FALLING;
+	 gpio.Pull = GPIO_PULLUP;
+	 gpio.Speed = GPIO_SPEED_FREQ_LOW;
+	 gpio.Pin = _KEYPAD_ROW_GPIO_PIN[i];
+	 HAL_GPIO_Init((GPIO_TypeDef*)_KEYPAD_ROW_GPIO_PORT[i], &gpio);
+
+
   }
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
+
 }
 //#############################################################################################
 uint16_t	KeyPad_Scan(void)
@@ -48,17 +54,25 @@ uint16_t	KeyPad_Scan(void)
     {
       if(HAL_GPIO_ReadPin((GPIO_TypeDef*)_KEYPAD_ROW_GPIO_PORT[r], _KEYPAD_ROW_GPIO_PIN[r]) == GPIO_PIN_RESET)
       {
-        _KEYPAD_DELAY(_KEYPAD_DEBOUNCE_TIME_MS);
+    	  _KEYPAD_DELAY(_KEYPAD_DEBOUNCE_TIME_MS);
         if(HAL_GPIO_ReadPin((GPIO_TypeDef*)_KEYPAD_ROW_GPIO_PORT[r], _KEYPAD_ROW_GPIO_PIN[r]) == GPIO_PIN_RESET)
         {
           key |= 1<<c;					
           key |= 1<<(r+8);
           while(HAL_GPIO_ReadPin((GPIO_TypeDef*)_KEYPAD_ROW_GPIO_PORT[r], _KEYPAD_ROW_GPIO_PIN[r]) == GPIO_PIN_RESET)
-            _KEYPAD_DELAY(5);
+        	  _KEYPAD_DELAY(5);
+          for(uint8_t d=0 ; d<KeyPad.ColumnSize ; d++)
+            {
+        	  HAL_GPIO_WritePin((GPIO_TypeDef*)_KEYPAD_COLUMN_GPIO_PORT[d], _KEYPAD_COLUMN_GPIO_PIN[d], GPIO_PIN_RESET);
+            }
           return key;
         }
       }			
     }		
+  }
+  for(uint8_t d=0 ; d<KeyPad.ColumnSize ; d++)
+  {
+	  HAL_GPIO_WritePin((GPIO_TypeDef*)_KEYPAD_COLUMN_GPIO_PORT[d], _KEYPAD_COLUMN_GPIO_PIN[d], GPIO_PIN_RESET);
   }
   return key;
 }
@@ -74,7 +88,7 @@ uint16_t	KeyPad_WaitForKey(uint32_t  Timeout_ms)
 			KeyPad.LastKey = keyRead;
 			return keyRead;	
 		}
-		_KEYPAD_DELAY(_KEYPAD_DEBOUNCE_TIME_MS);	
+		_KEYPAD_DELAY(_KEYPAD_DEBOUNCE_TIME_MS);
 	}
 	uint32_t	StartTime = HAL_GetTick();
 	while(HAL_GetTick()-StartTime < Timeout_ms)
@@ -85,7 +99,7 @@ uint16_t	KeyPad_WaitForKey(uint32_t  Timeout_ms)
 			KeyPad.LastKey = keyRead;
 			return keyRead;	
 		}
-		_KEYPAD_DELAY(_KEYPAD_DEBOUNCE_TIME_MS);	
+		_KEYPAD_DELAY(_KEYPAD_DEBOUNCE_TIME_MS);
 	}
 	KeyPad.LastKey=0;
 	return 0;
@@ -134,3 +148,5 @@ char	KeyPad_WaitForKeyGetChar(uint32_t	Timeout_ms)
 			return 0;		
 	}	
 }
+
+

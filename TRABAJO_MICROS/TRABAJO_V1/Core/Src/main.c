@@ -54,6 +54,7 @@
 /* USER CODE BEGIN PV */
 Coordinador C;
 uint16_t ANALOG = 0;
+volatile uint8_t flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -122,10 +123,12 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-    Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(100));
-   HAL_ADC_Start_IT(&hadc1);
-    Coordinador_IN_TIME(&C, ANALOG);
-    HAL_Delay(10);
+    //Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(100));
+
+    if (flag == 1){
+    	 Coordinador_IN(&C, KeyPad_WaitForKeyGetChar(0));
+    	 flag = 0;
+    }
 
 
   }
@@ -178,16 +181,42 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void EXTI9_5_IRQHandler(void)
+{
+
+    HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
+    HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_9);
+   __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_7);
+}
+void EXTI15_10_IRQHandler(void)
+{
+
+    HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
+    HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_11);
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_13);
+}
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim){
 // This callback is automatically called by the HAL on the UEV event
 if (htim->Instance == TIM6)
 	 Coordinador_ACTLZR(&C);
+	HAL_ADC_Start_IT(&hadc1);
+    Coordinador_IN_TIME(&C, ANALOG);
 }
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
     // Read & Update The ADC Result
     ANALOG = HAL_ADC_GetValue(&hadc1);
 }
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+
+	flag = 1;
+
+}
+    // Manejar más filas si es necesario
 
 /* USER CODE END 4 */
 

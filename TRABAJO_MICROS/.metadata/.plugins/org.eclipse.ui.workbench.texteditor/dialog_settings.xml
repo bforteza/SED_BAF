@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="keys_CNF"/>
+		<item key="selection" value="Locker_open"/>
 		<list key="findhistory">
+			<item value="Locker_Open"/>
 			<item value="conf_keys"/>
 			<item value="Conf_Pantalla"/>
 			<item value="conf_usuario"/>
@@ -21,6 +22,7 @@
 			<item value="_KEYPAD_USE_FREERTOS"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Locker_open"/>
 			<item value="keys_CNF"/>
 			<item value="Pantalla_Conf"/>
 			<item value="usuario_CNF"/>
